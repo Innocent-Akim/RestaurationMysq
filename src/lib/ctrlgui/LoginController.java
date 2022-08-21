@@ -20,6 +20,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import static lib.Main.Main.stage;
+import lib.Main.View;
 
 /**
  * FXML Controller class
@@ -63,10 +65,18 @@ public class LoginController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+        initEvent();
+    }
+
+    void initEvent() {
+        btnConnecter.setOnAction((event) -> {
+            stage.setContent(View.instance().get(View.PRINCIPARE));
+
+        });
+    }
 
     @FXML
     private void switchCreate(MouseEvent event) {
     }
-    
+
 }

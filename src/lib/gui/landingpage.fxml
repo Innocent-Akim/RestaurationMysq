@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -35,10 +36,13 @@
             </Label>
          </children>
       </AnchorPane>
-      <JFXButton fx:id="connectvous" buttonType="RAISED" layoutX="688.0" layoutY="517.0" prefHeight="29.0" prefWidth="158.0" style="-fx-border-color: F0CE94; -fx-border-width: 0.25px; -fx-border-radius: 25px;" text="Connectez-vous" textFill="#f6ad2a" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+      <JFXButton fx:id="connectvous" buttonType="RAISED" layoutX="688.0" layoutY="517.0" prefHeight="29.0" prefWidth="158.0" style="-fx-border-color: #F0CE94; -fx-border-width: 0.25px; -fx-border-radius: 25px;" text="Connectez-vous" textFill="#f6ad2a" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
       </JFXButton>
    </children>
 </AnchorPane>

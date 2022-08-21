@@ -45,7 +45,7 @@ public class Main extends Application {
         stage.getStage().getIcons().add(new javafx.scene.image.Image("/lib/img/logo.png"));
         stage.setTitle("SOLUTION DE GESTION ADAPTE A VOTRE METIER");
         stage.setResizable(true);        stage.setMaximized(true);
-        stage.getScene().getStylesheets().add("/lib/css/material.css");
+        stage.getScene().getStylesheets().add("/lib/css/material-color.css");
         stage.show();
 
     }
