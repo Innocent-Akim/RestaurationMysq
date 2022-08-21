@@ -25,7 +25,7 @@
    <children>
       <AnchorPane layoutX="16.0" layoutY="2.0" prefHeight="49.0" prefWidth="852.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.leftAnchor="16.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="2.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: F0CE94; -fx-background-radius: 5px;" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="8.0">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="12.0" layoutY="8.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: F6AD2A; -fx-background-radius: 5px;" AnchorPane.leftAnchor="12.0" AnchorPane.topAnchor="8.0">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="STEAM_SQUARE" size="22" />
                </graphic>
@@ -35,12 +35,12 @@
                   <DropShadow blurType="GAUSSIAN" color="#c6c6c6" height="6.0" offsetX="0.5" offsetY="0.5" radius="2.5" width="6.0" />
                </effect>
                <children>
-                  <Text layoutX="11.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="VENTE DES ARTICLES">
+                  <Text layoutX="11.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURATION">
                      <font>
                         <Font name="Century Gothic Bold" size="13.0" />
                      </font>
                   </Text>
-                  <Icons525View fill="#421f06" glyphName="VINE" layoutX="287.0" layoutY="32.0" size="20" />
+                  <Icons525View fill="#421f06" glyphName="VINE" layoutX="256.0" layoutY="32.0" size="20" />
                   <Text fill="#42627d58" layoutX="12.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération" wrappingWidth="173.13670974969864">
                      <font>
                         <Font name="Gadugi Bold" size="12.0" />
@@ -95,7 +95,7 @@
                                  <children>
                                     <TextField fx:id="code_client" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="256.0" promptText="ORDINAIRE" style="-fx-background-color: #FFF;">
                                        <font>
-                                          <Font name="Century Gothic" size="11.0" />
+                                          <Font name="Century Gothic Bold" size="12.0" />
                                        </font>
                                     </TextField>
                                     <OctIconView fill="#a3a0d7" glyphName="LINK_EXTERNAL" layoutX="3.0" layoutY="19.0" size="15" />
@@ -113,7 +113,7 @@
                                  <children>
                                     <TextField fx:id="designation" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="256.0" promptText="Un salade de tomates " style="-fx-background-color: #FFF;">
                                        <font>
-                                          <Font name="Century Gothic" size="12.0" />
+                                          <Font name="Century Gothic Bold" size="13.0" />
                                        </font>
                                     </TextField>
                                     <OctIconView fill="#a3a0d7" glyphName="LINK_EXTERNAL" layoutX="3.0" layoutY="19.0" size="15" />
@@ -181,7 +181,7 @@
                                     <Font name="Century Gothic" size="12.0" />
                                  </font>
                               </Text>
-                              <JFXButton fx:id="enregitrebtn" buttonType="RAISED" layoutX="10.0" layoutY="251.0" prefHeight="28.0" prefWidth="274.0" style="-fx-border-width: 0.5px; -fx-border-radius: 5px; -fx-background-color: #fff; -fx-background-radius: 5px;" text="Ajouter" textFill="#f0ce94">
+                              <JFXButton fx:id="enregitrebtn" buttonType="RAISED" layoutX="10.0" layoutY="251.0" prefHeight="28.0" prefWidth="274.0" style="-fx-border-width: 0.5px; -fx-border-radius: 5px; -fx-background-color: #fff; -fx-background-radius: 5px;" text="Ajouter" textFill="#f6ad2a">
                                  <font>
                                     <Font name="Century Gothic Bold" size="13.0" />
                                  </font>
@@ -190,14 +190,14 @@
                         </AnchorPane>
                      </children>
                   </HBox>
-                  <Label fx:id="numerF" alignment="CENTER" layoutX="215.0" layoutY="1.0" prefHeight="53.0" prefWidth="104.0" style="-fx-border-color: FFAB23; -fx-border-width: 0.25; -fx-border-radius: 10px;" text="00">
+                  <Label fx:id="numerF" alignment="CENTER" layoutX="215.0" layoutY="5.0" prefHeight="53.0" prefWidth="104.0" style="-fx-border-color: FFAB23; -fx-border-width: 0.25; -fx-border-radius: 10px;" text="00">
                      <font>
                         <Font name="Century Gothic" size="17.0" />
                      </font>
                   </Label>
                   <JFXButton fx:id="print1" buttonType="RAISED" layoutX="36.0" layoutY="377.0" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #fff; -fx-border-width: 0.5px; -fx-border-radius: 5px;" text="Imprimer" textFill="#421f06">
                      <font>
-                        <Font name="Century Gothic" size="11.0" />
+                        <Font name="Century Gothic" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -205,20 +205,20 @@
                   </JFXButton>
                   <JFXButton fx:id="annuler_facture" buttonType="RAISED" layoutX="225.0" layoutY="376.0" prefHeight="27.0" prefWidth="83.0" style="-fx-background-color: #fff; -fx-border-width: 0.5px; -fx-border-radius: 5px;" text="Annuler" textFill="#421f06">
                      <font>
-                        <Font name="Century Gothic" size="11.0" />
+                        <Font name="Century Gothic" size="12.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <MaterialDesignIconView fill="#421f06" glyphName="ACCOUNT_CIRCLE" layoutX="215.0" layoutY="77.0" size="25" />
-                  <Label fx:id="client_nom" contentDisplay="CENTER" layoutX="240.0" layoutY="60.0" prefHeight="16.0" prefWidth="75.0" text="2" textFill="#0d0d0d00">
+                  <MaterialDesignIconView fill="#421f06" glyphName="ACCOUNT_CIRCLE" layoutX="215.0" layoutY="84.0" size="25" />
+                  <Label fx:id="client_nom" contentDisplay="CENTER" layoutX="240.0" layoutY="67.0" prefHeight="16.0" prefWidth="75.0" text="2" textFill="#0d0d0d00">
                      <font>
                         <Font name="Century Gothic Bold" size="13.0" />
                      </font>
                   </Label>
                   <Label fx:id="code_produit_" layoutX="301.0" layoutY="59.0" text="Label" textFill="#ffffff00" />
-                  <Button fx:id="btn_addCLient" alignment="CENTER" layoutX="311.0" layoutY="98.0" mnemonicParsing="false" style="-fx-background-color: F0CE94; -fx-background-radius: 20px;" text="+" textFill="WHITE">
+                  <Button fx:id="btn_addCLient" alignment="CENTER" layoutX="311.0" layoutY="98.0" mnemonicParsing="false" style="-fx-background-color: F6AD2A; -fx-background-radius: 20px;" text="+" textFill="WHITE">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
@@ -232,7 +232,7 @@
             <JFXListView fx:id="vb_vente" focusTraversable="false" layoutY="52.0" prefHeight="415.0" prefWidth="530.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="53.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="52.0" />
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="347.0" layoutY="48.0" prefHeight="48.0" prefWidth="530.0" style="-fx-background-color: fff; -fx-border-color: DEE7F8;" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="2.0">
+      <AnchorPane layoutX="347.0" layoutY="52.0" prefHeight="48.0" prefWidth="530.0" style="-fx-background-color: fff; -fx-border-color: DEE7F8;" AnchorPane.leftAnchor="347.0" AnchorPane.rightAnchor="2.0">
          <children>
             <AnchorPane layoutX="319.0" layoutY="6.0" prefHeight="37.0" prefWidth="255.0" AnchorPane.rightAnchor="-2.0">
                <children>
@@ -269,7 +269,7 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <AnchorPane layoutX="354.0" layoutY="58.0" prefHeight="26.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25; -fx-border-radius: 7px; -fx-background-radius: 7px;" AnchorPane.leftAnchor="354.0">
+      <AnchorPane layoutX="354.0" layoutY="61.0" prefHeight="26.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25; -fx-border-radius: 7px; -fx-background-radius: 7px;" AnchorPane.leftAnchor="354.0">
          <children>
             <TextField fx:id="recher_facture" layoutX="6.0" layoutY="1.0" prefHeight="24.0" prefWidth="220.0" promptText="Rechercher un produit" style="-fx-background-color: #FFF;">
                <font>
@@ -287,9 +287,9 @@
             <DropShadow blurType="GAUSSIAN" color="#c6c6c6" height="6.0" offsetX="0.5" offsetY="0.5" radius="2.5" width="6.0" />
          </effect>
          <children>
-            <Text layoutX="188.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT EN USD" wrappingWidth="145.220703125" AnchorPane.leftAnchor="188.0">
+            <Text fill="#6f6d6d" layoutX="188.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT EN USD" wrappingWidth="145.220703125" AnchorPane.leftAnchor="188.0">
                <font>
-                  <Font name="Century Gothic Bold" size="12.0" />
+                  <Font name="Century Gothic Bold" size="10.0" />
                </font>
             </Text>
             <Label fx:id="montant_payer" layoutX="188.0" layoutY="25.0" prefHeight="20.0" prefWidth="265.0" text="0.0" textFill="#0d0d0df3" AnchorPane.leftAnchor="188.0">
@@ -297,9 +297,9 @@
                   <Font name="System Bold" size="14.0" />
                </font>
             </Label>
-            <Text layoutX="459.9999532699585" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT EN CDF" wrappingWidth="172.9999941587448" AnchorPane.rightAnchor="246.0000525712967">
+            <Text fill="#6f6d6d" layoutX="459.9999532699585" layoutY="21.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MONTANT EN CDF" wrappingWidth="172.9999941587448" AnchorPane.rightAnchor="246.0000525712967">
                <font>
-                  <Font name="Century Gothic Bold" size="12.0" />
+                  <Font name="Century Gothic Bold" size="10.0" />
                </font>
             </Text>
             <Label fx:id="taux_1" layoutX="459.0" layoutY="22.0" prefHeight="20.0" prefWidth="265.0" text="0.0" textFill="#0d0d0df3" AnchorPane.rightAnchor="155.0">
@@ -315,12 +315,12 @@
                   <Icons525View fill="#421f06" glyphName="QRCODE" layoutX="6.0" layoutY="24.0" size="20" />
                </children>
             </AnchorPane>
-            <Text layoutX="49.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="QUANTITE DISPO" wrappingWidth="103.99999491870403">
+            <Text fill="#6f6d6d" layoutX="49.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="REPAS" wrappingWidth="103.99999491870403">
                <font>
-                  <Font name="Century Gothic Bold" size="12.0" />
+                  <Font name="Century Gothic Bold" size="10.0" />
                </font>
             </Text>
-            <Label fx:id="quantite_" layoutX="50.0" layoutY="25.0" prefHeight="20.0" prefWidth="101.0" text="0.0" textFill="#0d0d0df3">
+            <Label fx:id="quantite_" layoutX="50.0" layoutY="25.0" prefHeight="20.0" prefWidth="101.0" text="Disponiblie" textFill="#0d0d0df3">
                <font>
                   <Font name="System Bold" size="14.0" />
                </font>
@@ -329,7 +329,7 @@
       </AnchorPane>
       <ListView fx:id="listClient" layoutX="38.0" layoutY="178.0" prefHeight="28.0" prefWidth="492.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="178.0" />
       <ListView fx:id="listproduit_search" layoutX="38.0" layoutY="225.0" onMouseClicked="#mouse_exit_false" prefHeight="48.0" prefWidth="513.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="227.0" />
-      <AnchorPane layoutX="3.0" layoutY="50.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #F7F8FB;" AnchorPane.leftAnchor="3.0">
+      <AnchorPane layoutX="4.0" layoutY="55.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #F7F8FB;" AnchorPane.leftAnchor="4.0">
          <children>
             <AnchorPane layoutY="38.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #421f06;">
                <children>
@@ -352,7 +352,7 @@
             </Text>
             <Text layoutX="33.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pour un 1$">
                <font>
-                  <Font name="Century Gothic" size="12.0" />
+                  <Font name="Century Gothic Bold" size="12.0" />
                </font>
             </Text>
          </children>

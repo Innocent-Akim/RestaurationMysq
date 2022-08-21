@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.gn.lab.GNCalendarTile?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.chart.BarChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
@@ -53,12 +53,12 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="210.0" prefWidth="187.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label fx:id="fournisseur" alignment="CENTER" text="231" textFill="#b1a39d">
+                        <Label fx:id="fournisseur" alignment="CENTER" text="231" textFill="#3d1909">
                            <font>
                               <Font name="Century Gothic Bold" size="45.0" />
                            </font>
                         </Label>
-                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Fournisseurs">
+                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Commande">
                            <font>
                               <Font name="Century Gothic Bold" size="17.0" />
                            </font>
@@ -72,7 +72,7 @@
             </AnchorPane>
             <VBox fx:id="bn" alignment="CENTER" prefHeight="210.0" prefWidth="187.0">
                <children>
-                  <Label fx:id="clients" alignment="CENTER" text="34" textFill="#f0ce94">
+                  <Label fx:id="clients" alignment="CENTER" text="34" textFill="#f6ad2a">
                      <font>
                         <Font name="Century Gothic Bold" size="45.0" />
                      </font>
@@ -123,23 +123,21 @@
             </Text>
          </children>
       </AnchorPane>
-      <MaterialDesignIconView fill="#f0ce94" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="94.0" AnchorPane.leftAnchor="23.0" />
+      <MaterialDesignIconView fill="#f6ad2a" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="94.0" AnchorPane.leftAnchor="23.0" />
       <Text fill="#78858c" layoutX="40.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mouvement des ventes" wrappingWidth="176.24512284994125">
          <font>
             <Font name="Century Gothic" size="14.0" />
          </font>
       </Text>
-      <MaterialDesignIconView fill="#f0ce94" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="349.0" AnchorPane.leftAnchor="23.0" />
+      <MaterialDesignIconView fill="#f6ad2a" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="349.0" AnchorPane.leftAnchor="23.0" />
       <AnchorPane layoutX="14.0" layoutY="373.0" prefHeight="282.0" prefWidth="603.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="22.5" AnchorPane.rightAnchor="24.5" AnchorPane.topAnchor="369.0">
          <children>
-            <BarChart fx:id="piChart" prefHeight="269.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-               <xAxis>
-                  <CategoryAxis side="BOTTOM" />
-               </xAxis>
-               <yAxis>
-                  <NumberAxis side="LEFT" />
-               </yAxis>
-            </BarChart>
+            <GNCalendarTile layoutX="5.0" layoutY="5.0" prefHeight="268.0" prefWidth="329.0" AnchorPane.bottomAnchor="7.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="7.0" />
+            <ImageView fitHeight="268.0" fitWidth="228.0" layoutX="354.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="7.0">
+               <image>
+                  <Image url="@../img/servir.png" />
+               </image>
+            </ImageView>
          </children>
       </AnchorPane>
    </children>

@@ -43,7 +43,10 @@ public class View {
     public static String PRINCIPARE = "Principal";
     public static String ERROR = "Error";
     public static String LANDGINGPAGE = "landingpage";
-
+    public static String PARAMETRES = "Parametres";
+    public static String RAPPORT = "Rapports";
+    public static String PRODUITS = "Produits";
+        public static String PERSONNE = "Personnel";
     private static View instance;
 
     private String getUri(String uri) {
@@ -51,11 +54,13 @@ public class View {
     }
 
     public View() {
+        map.put(PRODUITS, getUri(PRODUITS));
         map.put(PRINCIPARE, getUri(PRINCIPARE));
         map.put(FACTURATION, getUri(FACTURATION));
         map.put(LOGIN, getUri(LOGIN));
-        map.put(ERROR, getUri(ERROR));
+        map.put(PARAMETRES, getUri(PARAMETRES));
         map.put(DASHBOARD, getUri(DASHBOARD));
+        map.put(RAPPORT, getUri(RAPPORT));
         map.put(ERROR, getUri(ERROR));
         map.put(LANDGINGPAGE, getUri(LANDGINGPAGE));
     }

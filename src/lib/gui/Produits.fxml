@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import de.jensd.fx.glyphs.octicons.OctIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="produit_interface" prefHeight="555.0" prefWidth="879.0" style="-fx-background-color: #FFF;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.ProduitsController">
+   <children>
+      <AnchorPane fx:id="itemList" layoutX="306.0" layoutY="56.0" prefHeight="495.0" prefWidth="569.0" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="56.0">
+         <children>
+            <JFXListView fx:id="itemProduit" focusTraversable="false" layoutX="14.0" layoutY="14.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="306.0" layoutY="39.0" prefHeight="48.0" prefWidth="569.0" style="-fx-background-color: fff; -fx-border-color: F6AD2A; -fx-border-width: 0.25px;" AnchorPane.leftAnchor="306.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <AnchorPane layoutX="313.25" layoutY="9.25" prefHeight="30.0" prefWidth="248.0" style="-fx-background-color: #fff; -fx-border-color: F6AD2A; -fx-border-width: 0.25; -fx-border-radius: 7px; -fx-background-radius: 7px;" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="9.25">
+               <children>
+                  <TextField fx:id="recher_facture" layoutX="4.0" layoutY="4.0" prefHeight="21.0" prefWidth="224.0" promptText="Rechercher un produit" style="-fx-background-color: #FFF;">
+                     <font>
+                        <Font name="Century Gothic" size="11.0" />
+                     </font>
+                  </TextField>
+                  <OctIconView fill="#f6ad2a" glyphName="SEARCH" layoutX="228.0" layoutY="24.0" size="13" />
+               </children>
+               <effect>
+                  <DropShadow color="WHITE" />
+               </effect>
+            </AnchorPane>
+            <JFXButton fx:id="btn_add_produit" buttonType="RAISED" layoutX="12.0" layoutY="11.0" text="Ajouter" textFill="#f6ad2a">
+               <graphic>
+                  <OctIconView fill="#f6ad2a" glyphName="PLUS" />
+               </graphic>
+               <font>
+                  <Font name="Century Gothic" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="495.0" fitWidth="274.0" layoutX="14.0" layoutY="183.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="165.50404357910156" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="183.0">
+         <image>
+            <Image url="@../img/table.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

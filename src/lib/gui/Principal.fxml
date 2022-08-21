@@ -46,7 +46,7 @@
                                                 <Font name="Century Gothic" size="13.0" />
                                              </font>
                                              <graphic>
-                                                <OctIconView fill="#efc47a" glyphName="DASHBOARD" size="17" />
+                                                <OctIconView fill="#f6ad2a" glyphName="DASHBOARD" size="17" />
                                              </graphic>
                                           </Label>
                                        </children>
@@ -61,7 +61,7 @@
                                                 <Font name="Century Gothic" size="13.0" />
                                              </font>
                                              <graphic>
-                                                <MaterialDesignIconView fill="#f0ce94" glyphName="BASKET_UNFILL" size="20" />
+                                                <MaterialDesignIconView fill="#f6ad2a" glyphName="BASKET_UNFILL" size="20" />
                                              </graphic>
                                           </Label>
                                           <FontAwesomeIconView fill="#eea829" glyphName="CARET_RIGHT" layoutX="150.0" layoutY="21.0" size="18" />
@@ -77,7 +77,7 @@
                                                 <Font name="Century Gothic" size="13.0" />
                                              </font>
                                              <graphic>
-                                                <FontAwesomeIconView fx:id="r" fill="#eba52d9e" glyphName="CLONE" size="19" />
+                                                <FontAwesomeIconView fx:id="r" fill="#f6ad2a" glyphName="CLONE" size="19" />
                                              </graphic>
                                           </Label>
                                        </children>
@@ -92,7 +92,7 @@
                                                 <Font name="Century Gothic" size="13.0" />
                                              </font>
                                              <graphic>
-                                                <FontAwesomeIconView fx:id="p" fill="#eba52d9e" glyphName="COG" size="19" />
+                                                <FontAwesomeIconView fx:id="p" fill="#f6ad2a" glyphName="COG" size="19" />
                                              </graphic>
                                           </Label>
                                        </children>
@@ -106,7 +106,7 @@
                         </AnchorPane>
                         <AnchorPane layoutX="12.0" layoutY="512.0" prefHeight="125.0" prefWidth="167.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="18.0">
                            <children>
-                              <MaterialDesignIconView fill="#efc47a" glyphName="ACCOUNT_BOX" layoutX="12.0" layoutY="62.0" size="48" />
+                              <MaterialDesignIconView fill="#f6ad2a" glyphName="ACCOUNT_BOX" layoutX="12.0" layoutY="62.0" size="48" />
                               <Text fx:id="txUserName" layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Akilimali Cizungu" wrappingWidth="143.00000503659248">
                                  <font>
                                     <Font name="Century Gothic Bold" size="16.0" />
@@ -117,7 +117,7 @@
                                     <Font size="13.0" />
                                  </font>
                               </Text>
-                              <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="139.0" layoutY="10.0" prefHeight="20.0" prefWidth="18.0" style="-fx-background-color: #48477b;" text="Configurer " textFill="#973232">
+                              <JFXButton alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="139.0" layoutY="10.0" prefHeight="20.0" prefWidth="18.0" style="-fx-background-color: DE561E;" text="Configurer " textFill="#973232">
                                  <font>
                                     <Font name="Ebrima" size="1.0" />
                                  </font>
@@ -130,7 +130,7 @@
                               </JFXButton>
                            </children>
                         </AnchorPane>
-                        <ImageView fitHeight="140.0" fitWidth="167.0" layoutX="9.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" opacity="0.4" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="10.0">
+                        <ImageView fitHeight="140.0" fitWidth="167.0" layoutX="9.0" layoutY="14.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="10.0">
                            <image>
                               <Image url="@../img/logo.png" />
                            </image>

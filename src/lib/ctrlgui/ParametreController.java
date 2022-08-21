@@ -5,13 +5,18 @@
  */
 package lib.ctrlgui;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import lib.Main.View;
+import lib.app.App;
 
 /**
  * FXML Controller class
@@ -34,6 +39,7 @@ public class ParametreController implements Initializable {
     private Label utilisateur;
     @FXML
     private Label indice;
+    public static StackPane contains;
 
     /**
      * Initializes the controller class.
@@ -41,6 +47,53 @@ public class ParametreController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+        contains = screen;
+        indice.setLayoutY(90);
+        initEvent();
+    }
+
+    void initEvent() {
+
+//        View.instance().setContaint(screen, View.PERSONNE);
+//        View.instance().setContaint(screen, View.SETTINGS);
+        App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
+
+        personnel.setOnMouseClicked((Action) -> {
+            indice.setLayoutY(90);
+            App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
+//            View.instance().setContaint(screen, View.PERSONNE);
+//            ecran_remove(screen, "/lib/screen/loadPersonne.fxml");
+        });
+        utilisateur.setOnMouseClicked((Action) -> {
+            indice.setLayoutY(130);
+            App.getInstance().IsSeleted(utilisateur, personnel, fonction, configuration);
+//            View.instance().setContaint(screen, View.UTILISATEUR);
+
+        });
+        fonction.setOnMouseClicked((Action) -> {
+
+//            View.instance().setContaint(screen, View.FONCTION);
+            indice.setLayoutY(170);
+            App.getInstance().IsSeleted(fonction, personnel, utilisateur, configuration);
+
+        });
+        configuration.setOnMouseClicked((Action) -> {
+            indice.setLayoutY(210);
+
+//            View.instance().setContaint(screen, View.CONFIGURATION);
+            App.getInstance().IsSeleted(configuration, personnel, utilisateur, fonction);
+
+        });
+    }
+
+    public void ecran_remove(StackPane pane, String ecran) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource(ecran));
+            pane.getChildren().removeAll();
+            pane.getChildren().setAll(root);
+        } catch (IOException ex) {
+//            Cls_alerte.alerteErreur("error", ex.getMessage());
+        }
+    }
+
 }

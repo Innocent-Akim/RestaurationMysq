@@ -16,7 +16,7 @@
    <children>
       <AnchorPane layoutX="30.0" layoutY="12.0" prefHeight="64.0" prefWidth="741.0" style="-fx-background-color: fff; -fx-background-radius: 5px;" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0">
          <children>
-            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: #029FD4; -fx-background-radius: 5px;">
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="18.0" layoutY="14.0" prefHeight="33.0" prefWidth="35.0" style="-fx-background-color: F6AD2A; -fx-background-radius: 5px;">
                <graphic>
                   <FontAwesomeIconView fill="WHITE" glyphName="STEAM_SQUARE" size="22" />
                </graphic>
@@ -63,7 +63,7 @@
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                            <graphic>
-                              <MaterialDesignIconView fill="#01a7e3" glyphName="ACCOUNT_OUTLINE" size="20" />
+                              <MaterialDesignIconView fill="#f6ad2a" glyphName="ACCOUNT_OUTLINE" size="20" />
                            </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -74,7 +74,7 @@
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                            <graphic>
-                              <MaterialDesignIconView fill="#01a7e3" glyphName="WRAP" size="20" />
+                              <MaterialDesignIconView fill="#f6ad2a" glyphName="WRAP" size="20" />
                            </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -85,7 +85,7 @@
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                            <graphic>
-                              <MaterialDesignIconView fill="#01a7e3" glyphName="ACCESS_POINT" size="20" />
+                              <MaterialDesignIconView fill="#f6ad2a" glyphName="ACCESS_POINT" size="20" />
                            </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -96,7 +96,7 @@
                               <Font name="Century Gothic" size="13.0" />
                            </font>
                            <graphic>
-                              <MaterialDesignIconView fill="#01a7e3" glyphName="ACCOUNT_MULTIPLE_OUTLINE" size="20" />
+                              <MaterialDesignIconView fill="#f6ad2a" glyphName="ACCOUNT_MULTIPLE_OUTLINE" size="20" />
                            </graphic>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -104,7 +104,7 @@
                         </Label>
                      </children>
                   </GridPane>
-                  <Label fx:id="indice" layoutY="209.0" prefHeight="17.0" prefWidth="3.0" style="-fx-background-color: #01a7e3; -fx-background-radius: 20px;" AnchorPane.leftAnchor="0.0" />
+                  <Label fx:id="indice" layoutY="209.0" prefHeight="17.0" prefWidth="3.0" style="-fx-background-color: F6AD2A; -fx-background-radius: 20px;" textFill="#f6ad2a" AnchorPane.leftAnchor="0.0" />
                </children>
             </AnchorPane>
          </children>

@@ -5,20 +5,20 @@
  */
 package lib.ctrlgui;
 
-import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXListView;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
-import de.jensd.fx.glyphs.icons525.Icons525View;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
-import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.Main.View;
+import lib.app.App;
+import org.controlsfx.control.PopOver;
 
 /**
  * FXML Controller class
@@ -57,14 +57,43 @@ public class PrincipalController implements Initializable {
     private Text txtFonctionuser;
     @FXML
     private JFXListView<?> listdata;
+    public static StackPane screenPane;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
+        screenPane = screen;
+        App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
+        View.instance().setContaint(screen, View.DASHBOARD);
+        initEvent();
+    }
 
-    
+    void initEvent() {
+        b_dash.setOnMouseClicked((event) -> {
+            App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
+            View.instance().setContaint(screen, View.DASHBOARD);
+        });
+        b_operation.setOnMouseClicked((event) -> {
+            try {
+                App.getInstance().IsSeleted(b_operation, b_dash, b_rapport, b_parametre);
+                App.popOverMenu(b_operation, getClass().getResource("/lib/gui/PopOperation.fxml"),
+                        PopOver.ArrowLocation.LEFT_CENTER);
+            } catch (IOException ex) {
+                System.out.print(ex.getMessage());
+            }
+        });
+        b_parametre.setOnMouseClicked((event) -> {
+            App.getInstance().IsSeleted(b_parametre, b_rapport, b_operation, b_dash);
+            View.instance().setContaint(screen, View.PARAMETRES);
+        });
+        b_rapport.setOnMouseClicked((event) -> {
+            App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
+            View.instance().setContaint(screen, View.RAPPORT);
+
+        });
+
+    }
+
 }

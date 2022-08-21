@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import java.net.URL?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="214.0" prefWidth="310.0" style="-fx-background-color: #fff;" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrlgui.AddProduitController">
+    <stylesheets>
+        <URL value="@addproduit.css" />
+    </stylesheets>
+   <children>
+      <TextField fx:id="designation" layoutX="16.0" layoutY="41.0" prefHeight="25.0" prefWidth="284.0" promptText="Entrez le produit" style="-fx-background-color: Transparent; -fx-border-color: #c2c2c2c2; -fx-border-width: 0.5px;">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </TextField>
+      <Label layoutX="16.0" layoutY="24.0" text="Produits">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="punitaire" layoutX="16.0" layoutY="87.0" prefHeight="25.0" prefWidth="284.0" promptText="Entrez le prix unitaire" style="-fx-background-color: Transparent; -fx-border-color: #c2c2c2c2; -fx-border-width: 0.5px;">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </TextField>
+      <Label layoutX="16.0" layoutY="70.0" text="Punitaire">
+         <font>
+            <Font name="Century Gothic" size="13.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="17.0" layoutY="121.0" prefHeight="27.0" prefWidth="273.0">
+         <children>
+            <ComboBox fx:id="categorieCbx" focusTraversable="false" prefHeight="27.0" prefWidth="248.0" promptText="Catégorie" style="-fx-background-color: Transparent; -fx-border-width: 0.5px; -fx-border-color: #c2c2c2c2;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="33.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ComboBox>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="categorieBtn" buttonType="RAISED" focusTraversable="false" layoutX="269.0" layoutY="121.0" prefHeight="28.0" prefWidth="24.0" style="-fx-background-color: #fff; -fx-background-radius: 4em; -fx-border-radius: 4em;" styleClass="hover_border" text="+" textFill="#2c5e1a">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <JFXButton fx:id="enregistreBtn" buttonType="RAISED" layoutX="19.0" layoutY="169.0" prefHeight="25.0" prefWidth="273.0" style="-fx-background-color: F6AD2A;" text="Enregistrer" textFill="WHITE">
+         <font>
+            <Font name="Segoe UI Bold" size="13.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+   </children>
+</AnchorPane>
