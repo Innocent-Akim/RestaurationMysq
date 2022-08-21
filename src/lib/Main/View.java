@@ -42,6 +42,8 @@ public class View {
     public static String POPOPERATION = "PopOperation";
     public static String PRINCIPARE = "Principal";
     public static String ERROR = "Error";
+    public static String LANDGINGPAGE = "landingpage";
+
     private static View instance;
 
     private String getUri(String uri) {
@@ -55,6 +57,7 @@ public class View {
         map.put(ERROR, getUri(ERROR));
         map.put(DASHBOARD, getUri(DASHBOARD));
         map.put(ERROR, getUri(ERROR));
+        map.put(LANDGINGPAGE, getUri(LANDGINGPAGE));
     }
 
     public static View instance() {

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="554.0" prefWidth="812.0" style="-fx-background-color: fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrlgui.LandingpageController">
+   <children>
+      <ImageView fitHeight="399.0" fitWidth="450.0" layoutX="14.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="97.86428833007812" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="348.0">
+         <image>
+            <Image url="@../img/table.png" />
+         </image>
+      </ImageView>
+      <Text fill="#3d1909" layoutX="396.99997541308403" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SPRING IN WOODFOOD" wrappingWidth="417.9999950826168" AnchorPane.rightAnchor="-2.999970495700836">
+         <font>
+            <Font name="Century Gothic Bold" size="55.0" />
+         </font>
+      </Text>
+      <AnchorPane layoutY="14.0" prefHeight="57.0" prefWidth="263.0" style="-fx-background-color: #f6ad2a; -fx-background-radius: 0 30px 30px 0;" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="14.0">
+         <children>
+            <Label layoutY="-5.0" text="REA" textFill="#3d1909" AnchorPane.leftAnchor="4.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="4.0" layoutY="32.0" prefHeight="17.0" prefWidth="250.0" text="PATISSERIE &amp; RESTAURANT" textFill="WHITE" AnchorPane.leftAnchor="4.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="connectvous" buttonType="RAISED" layoutX="688.0" layoutY="517.0" prefHeight="29.0" prefWidth="158.0" style="-fx-border-color: F0CE94; -fx-border-width: 0.25px; -fx-border-radius: 25px;" text="Connectez-vous" textFill="#f6ad2a" AnchorPane.bottomAnchor="8.0" AnchorPane.rightAnchor="8.0">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

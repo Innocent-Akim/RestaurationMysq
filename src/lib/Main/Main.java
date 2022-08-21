@@ -42,18 +42,17 @@ public class Main extends Application {
         stage = new vulembereGUI();
         connect();
         primaryStage_ = primaryStage;
-        stage.getStage().getIcons().add(new javafx.scene.image.Image("/lib/image/LogoEMs.png"));
+        stage.getStage().getIcons().add(new javafx.scene.image.Image("/lib/img/logo.png"));
         stage.setTitle("SOLUTION DE GESTION ADAPTE A VOTRE METIER");
-        stage.setResizable(true);
-        stage.setMaximized(true);
-        stage.getScene().getStylesheets().add("/lib/css/material-color.css");
+        stage.setResizable(true);        stage.setMaximized(true);
+        stage.getScene().getStylesheets().add("/lib/css/material.css");
         stage.show();
 
     }
 
     void connect() {
         if (Dbconnect.cnx() != null) {
-            stage.setContent(View.instance().get(View.LOGIN));
+            stage.setContent(View.instance().get(View.LANDGINGPAGE));
         } else {
             stage.setContent(View.instance().get(View.ERROR));
         }

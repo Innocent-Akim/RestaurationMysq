@@ -1,11 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.ErrorController">
-    
+
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="1209.0" style="-fx-background-color: fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrlgui.ErrorController">
+   <children>
+      <ImageView fitHeight="241.0" fitWidth="464.0" layoutY="120.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="218.44003295898438" AnchorPane.topAnchor="120.0">
+         <image>
+            <Image url="@../img/serveur_down.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="605.0" layoutY="217.0" text="ERROR DU SERVEUR" textFill="#f6ad2a" AnchorPane.rightAnchor="125.0">
+         <font>
+            <Font name="System Bold" size="54.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="614.0" layoutY="292.0" prefHeight="77.0" prefWidth="479.0" text="Code 500" textFill="#f6ad2a" AnchorPane.rightAnchor="116.0">
+         <font>
+            <Font name="System Bold" size="53.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="241.0" fitWidth="417.0" layoutX="639.0" layoutY="369.0" nodeOrientation="RIGHT_TO_LEFT" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="185.632568359375">
+         <image>
+            <Image url="@../img/maintenance.png" />
+         </image>
+      </ImageView>
+   </children>
 </AnchorPane>
