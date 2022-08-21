@@ -53,9 +53,9 @@ public class Main extends Application {
 
     void connect() {
         if (Dbconnect.cnx() != null) {
-            stage.setContent(View.instance().get(View.PROGRESS));
+            stage.setContent(View.instance().get(View.LOGIN));
         } else {
-            stage.setContent(View.instance().get(View.CONFIGURATION));
+            stage.setContent(View.instance().get(View.ERROR));
         }
 
     }

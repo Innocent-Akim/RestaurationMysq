@@ -36,33 +36,12 @@ public class View {
     public static Node currentView = null;
     public static JFXDialog dialog;
     public static final PopOver over = new PopOver();
-    public static String DASHBOARD = "dashboard";
-    public static String HOME = "home";
-    public static String VENTE = "ventes";
-    public static String FOURNIR = "appro";
-    public static String COMPTABILITE = "comptabilite";
-    public static String SETTINGS = "parametre";
-    public static String UTILISATEUR = "utilisateur";
-    public static String PERSONNE = "loadPersonne";
-    public static String FONCTION = "fonction";
-    public static String LOGIN = "login";
-    public static String CONFIGURATION = "configuration";
+    public static String DASHBOARD = "Dashboard";
+    public static String FACTURATION = "Facturation";
+    public static String LOGIN = "Login";
+    public static String POPOPERATION = "PopOperation";
+    public static String PRINCIPARE = "Principal";
     public static String ERROR = "Error";
-    public static String RAPPORT = "rapport";
-    public static String STATISTIQUE = "statistique";
-    public static String CAISSE = "caisse";
-    public static String COMMANDE = "commande";
-    public static String PRODUIT = "produits";
-    public static String MARKETING = "marketing";
-    public static String PROGRESS = "Progressbar";
-    public static String AGENDA = "agenda";
-    public static String LIST_COMPTE = "listCompte";
-    public static String ECRITURE = "ecriture";
-    public static String JOURNAL = "journal";
-    public static String GRANDLIVRE = "grandLivre";
-    public static String BALANCE = "balance";
-    public static String STOCK = "stock";
-    public static String DETTES = "dettes";
     private static View instance;
 
     private String getUri(String uri) {
@@ -70,34 +49,12 @@ public class View {
     }
 
     public View() {
-        map.put(HOME, getUri(HOME));
-        map.put(DASHBOARD, getUri(DASHBOARD));
+        map.put(PRINCIPARE, getUri(PRINCIPARE));
+        map.put(FACTURATION, getUri(FACTURATION));
         map.put(LOGIN, getUri(LOGIN));
-        map.put(CONFIGURATION, getUri(CONFIGURATION));
-        map.put(SETTINGS, getUri(SETTINGS));
-        map.put(FOURNIR, getUri(FOURNIR));
         map.put(ERROR, getUri(ERROR));
-        map.put(COMPTABILITE, getUri(COMPTABILITE));
-        map.put(RAPPORT, getUri(RAPPORT));
-        map.put(STATISTIQUE, getUri(STATISTIQUE));
-        map.put(CAISSE, getUri(CAISSE));
-        map.put(PRODUIT, getUri(PRODUIT));
-        map.put(COMMANDE, getUri(COMMANDE));
-        map.put(VENTE, getUri(VENTE));
-        map.put(PERSONNE, getUri(PERSONNE));
-        map.put(FONCTION, getUri(FONCTION));
-        map.put(UTILISATEUR, getUri(UTILISATEUR));
-        map.put(MARKETING, getUri(MARKETING));
-        map.put(PROGRESS, getUri(PROGRESS));
-        map.put(AGENDA, getUri(AGENDA));
-        map.put(LIST_COMPTE, getUri(LIST_COMPTE));
-        map.put(ECRITURE, getUri(ECRITURE));
-        map.put(JOURNAL, getUri(JOURNAL));
-        map.put(GRANDLIVRE, getUri(GRANDLIVRE));
-        map.put(BALANCE, getUri(BALANCE));
-        map.put(STOCK, getUri(STOCK));
-        map.put(DETTES, getUri(DETTES));
-
+        map.put(DASHBOARD, getUri(DASHBOARD));
+        map.put(ERROR, getUri(ERROR));
     }
 
     public static View instance() {
