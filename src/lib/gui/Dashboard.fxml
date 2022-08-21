@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="665.0" prefWidth="629.0" style="-fx-background-color: #F1F4F9;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.DashboardController">
+   <children>
+      <GridPane hgap="10.0" layoutX="22.5" layoutY="109.0" AnchorPane.leftAnchor="22.5" AnchorPane.rightAnchor="24.5">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="210.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" />
+            <AnchorPane prefHeight="210.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" GridPane.columnIndex="1">
+               <children>
+                  <VBox alignment="CENTER" layoutX="5.0" layoutY="1.0" prefHeight="210.0" prefWidth="177.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="agents" alignment="CENTER" text="118" textFill="#fa573c">
+                           <font>
+                              <Font name="Century Gothic Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Agents">
+                           <font>
+                              <Font name="Century Gothic Bold" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="210.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" GridPane.columnIndex="2">
+               <children>
+                  <VBox alignment="CENTER" prefHeight="210.0" prefWidth="187.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Label fx:id="fournisseur" alignment="CENTER" text="231" textFill="#b1a39d">
+                           <font>
+                              <Font name="Century Gothic Bold" size="45.0" />
+                           </font>
+                        </Label>
+                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Fournisseurs">
+                           <font>
+                              <Font name="Century Gothic Bold" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <VBox fx:id="bn" alignment="CENTER" prefHeight="210.0" prefWidth="187.0">
+               <children>
+                  <Label fx:id="clients" alignment="CENTER" text="34" textFill="#f0ce94">
+                     <font>
+                        <Font name="Century Gothic Bold" size="45.0" />
+                     </font>
+                  </Label>
+                  <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Clients">
+                     <font>
+                        <Font name="Century Gothic Bold" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </VBox>
+         </children>
+      </GridPane>
+      <AnchorPane layoutX="25.0" layoutY="1.0" prefHeight="54.0" prefWidth="603.0" AnchorPane.bottomAnchor="611.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+         <children>
+            <Label fx:id="dateDay" layoutX="12.0" layoutY="3.0" prefHeight="36.0" prefWidth="44.0" text="28" textFill="#78858c">
+               <font>
+                  <Font name="Century Gothic" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="mothOfyear" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="14.0" layoutY="35.0" text="Decembre 2019" textFill="#78858c">
+               <font>
+                  <Font name="Century Gothic" size="15.0" />
+               </font>
+               <graphic>
+                  <FontAwesomeIconView fill="#78858c" glyphName="SORT_DOWN" size="15" />
+               </graphic>
+            </Label>
+            <Label fx:id="jour" layoutX="48.0" layoutY="3.0" prefHeight="35.0" prefWidth="216.0" text="Mercredi" textFill="#78858c">
+               <font>
+                  <Font name="Century Gothic" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="sc" layoutX="39.0" layoutY="92.91796875">
+         <children>
+            <Text fx:id="bn1" fill="#78858c" strokeType="OUTSIDE" strokeWidth="0.0" text="Vu Géneral sur le Flux">
+               <font>
+                  <Font name="Century Gothic" size="14.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Text>
+         </children>
+      </AnchorPane>
+      <MaterialDesignIconView fill="#f0ce94" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="94.0" AnchorPane.leftAnchor="23.0" />
+      <Text fill="#78858c" layoutX="40.0" layoutY="348.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Mouvement des ventes" wrappingWidth="176.24512284994125">
+         <font>
+            <Font name="Century Gothic" size="14.0" />
+         </font>
+      </Text>
+      <MaterialDesignIconView fill="#f0ce94" glyphName="CHECKBOX_BLANK" layoutX="23.0" layoutY="349.0" AnchorPane.leftAnchor="23.0" />
+      <AnchorPane layoutX="14.0" layoutY="373.0" prefHeight="282.0" prefWidth="603.0" style="-fx-background-color: #fff; -fx-background-radius: 15px;" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="22.5" AnchorPane.rightAnchor="24.5" AnchorPane.topAnchor="369.0">
+         <children>
+            <BarChart fx:id="piChart" prefHeight="269.0" prefWidth="500.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <xAxis>
+                  <CategoryAxis side="BOTTOM" />
+               </xAxis>
+               <yAxis>
+                  <NumberAxis side="LEFT" />
+               </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
