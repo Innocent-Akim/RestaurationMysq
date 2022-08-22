@@ -4,72 +4,79 @@
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.LoadProduitController">
+
+<AnchorPane prefHeight="103.0" prefWidth="621.0" style="-fx-background-color: Transparent; -fx-background-radius: 0.5em;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.LoadProduitController">
    <children>
-      <AnchorPane prefHeight="103.0" prefWidth="621.0" style="-fx-background-color: Transparent; -fx-background-radius: 0.5em;">
-         <children>
-            <TextField fx:id="designationFld" layoutX="3.0" layoutY="18.0" prefHeight="25.0" prefWidth="451.0" promptText="FIGADO 2.0 SYRUP 200 ML (LIVER TONIC)" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="170.0">
-               <font>
-                  <Font name="Century Gothic Bold" size="14.0" />
-               </font>
-            </TextField>
-            <TextField fx:id="quantiteFld" alignment="CENTER" focusTraversable="false" layoutX="459.0" layoutY="19.0" prefHeight="29.0" prefWidth="121.0" promptText="103" style="-fx-background-color: Transparent;" AnchorPane.rightAnchor="43.0">
-               <font>
-                  <Font name="Century Gothic Bold" size="14.0" />
-               </font>
-            </TextField>
-            <Label layoutX="3.0" layoutY="2.0" text="Désignation" textFill="#595a5b" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="2.0">
-               <font>
-                  <Font name="Century Gothic" size="12.0" />
-               </font>
-            </Label>
-            <Label alignment="CENTER" layoutX="463.0" layoutY="8.0" prefHeight="15.0" prefWidth="106.0" text="Prix unitaire" textFill="#4b4d4d" AnchorPane.topAnchor="2.0">
-               <font>
-                  <Font name="Century Gothic" size="12.0" />
-               </font>
-            </Label>
-            <TextField fx:id="categorieFld" layoutX="6.0" layoutY="65.0" prefHeight="28.0" prefWidth="172.0" promptText="INJECTABLE" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="443.0">
-               <font>
-                  <Font name="Century Gothic Bold" size="14.0" />
-               </font>
-            </TextField>
-            <Label alignment="BOTTOM_LEFT" layoutX="7.0" layoutY="46.0" prefHeight="15.0" prefWidth="172.0" text="Catégorie" textFill="#5b5b5b" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="3.0">
-               <font>
-                  <Font name="Century Gothic" size="12.0" />
-               </font>
-            </Label>
-            <Label fx:id="codeBarLbl" layoutX="110.0" layoutY="80.0" text="Label" textFill="#ffffff00" />
-            <Separator layoutX="7.0" layoutY="100.0" prefHeight="1.0" prefWidth="615.0" style="-fx-background-color: F6AD2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
-            <JFXButton fx:id="btn_delete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="585.0" layoutY="53.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: #fff; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="hover_border" text=" " textFill="#2c5e1a" AnchorPane.rightAnchor="6.0">
-               <font>
-                  <Font name="Century Gothic Bold" size="10.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <MaterialDesignIconView fill="#3d1909" glyphName="WINDOW_CLOSE" size="16" />
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="btn_modifier" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="585.0" layoutY="12.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: F6AD2A; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="hover_border" text=" " textFill="#3d1909" AnchorPane.rightAnchor="6.0">
-               <font>
-                  <Font name="Century Gothic Bold" size="10.0" />
-               </font>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <graphic>
-                  <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="16" />
-               </graphic>
-            </JFXButton>
-         </children>
-      </AnchorPane>
+      <TextField fx:id="designationFld" layoutX="52.0" layoutY="18.0" prefHeight="28.0" prefWidth="399.0" promptText="FIGADO 2.0 SYRUP 200 ML (LIVER TONIC)" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="170.0">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="punitaire" alignment="CENTER" focusTraversable="false" layoutX="457.0" layoutY="34.0" prefHeight="29.0" prefWidth="121.0" promptText="103" style="-fx-background-color: Transparent;" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Label layoutX="3.0" layoutY="2.0" text="Désignation" textFill="#595a5b" AnchorPane.leftAnchor="52.0" AnchorPane.topAnchor="2.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="455.0" layoutY="16.0" prefHeight="15.0" prefWidth="121.0" text="Prix unitaire" textFill="#4b4d4d" AnchorPane.rightAnchor="45.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="categorieFld" layoutX="6.0" layoutY="65.0" prefHeight="28.0" prefWidth="226.0" promptText="INJECTABLE" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="343.0">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </TextField>
+      <Label alignment="BOTTOM_LEFT" layoutX="7.0" layoutY="46.0" prefHeight="15.0" prefWidth="172.0" text="Catégorie" textFill="#5b5b5b" AnchorPane.bottomAnchor="42.0" AnchorPane.leftAnchor="52.0">
+         <font>
+            <Font name="Century Gothic" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="codeBarLbl" layoutX="196.0" layoutY="85.0" text="Label" textFill="#ffffff00" />
+      <Separator layoutX="7.0" layoutY="100.0" prefHeight="1.0" prefWidth="615.0" style="-fx-background-color: F6AD2A;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="7.0" AnchorPane.rightAnchor="7.0" />
+      <JFXButton fx:id="btn_delete" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="585.0" layoutY="53.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: #fff; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="hover_border" text=" " textFill="#2c5e1a" AnchorPane.rightAnchor="6.0">
+         <font>
+            <Font name="Century Gothic Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <MaterialDesignIconView fill="#3d1909" glyphName="WINDOW_CLOSE" size="16" />
+         </graphic>
+      </JFXButton>
+      <JFXButton fx:id="btn_modifier" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" focusTraversable="false" layoutX="585.0" layoutY="12.0" prefHeight="28.0" prefWidth="28.0" style="-fx-background-color: F6AD2A; -fx-background-radius: 5px; -fx-border-radius: 5px;" styleClass="hover_border" text=" " textFill="#3d1909" AnchorPane.rightAnchor="6.0">
+         <font>
+            <Font name="Century Gothic Bold" size="10.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="EDIT" size="16" />
+         </graphic>
+      </JFXButton>
+      <Label fx:id="index" alignment="CENTER" layoutX="1.0" layoutY="24.0" prefHeight="62.0" prefWidth="49.0" style="-fx-background-color: #3D1909; -fx-background-radius: 10px; -fx-border-color: #F6AD2A; -fx-border-radius: 10px;" text="PR" textFill="WHITE" AnchorPane.leftAnchor="1.0">
+         <font>
+            <Font name="Century Gothic Bold" size="28.0" />
+         </font>
+      </Label>
+      <ComboBox fx:id="categoriecbx" focusTraversable="false" layoutX="52.0" layoutY="53.0" prefHeight="25.0" prefWidth="226.0" promptText="selection la categorie" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="343.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ComboBox>
    </children>
-</StackPane>
+</AnchorPane>

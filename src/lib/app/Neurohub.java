@@ -7,6 +7,7 @@ package lib.app;
 
 import com.ibm.icu.text.NumberFormat;
 import com.ibm.icu.text.RuleBasedNumberFormat;
+import com.jfoenix.controls.JFXComboBox;
 import java.io.File;
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -112,7 +113,25 @@ public class Neurohub {
             } else if (f instanceof PasswordField) {
                 PasswordField txt = (PasswordField) f;
                 txt.setText(null);
+            } else if (f instanceof JFXComboBox) {
+                JFXComboBox txt = (JFXComboBox) f;
+                txt.setValue(null);
             }
+
+        }
+    }
+
+    public void initFieldClean(TextField... node) {
+        for (TextField text : node) {
+            text.setEditable(false);
+        }
+
+    }
+
+    public void initFieldActive(TextField... node) {
+        for (TextField text : node) {
+            text.setStyle("-fx-border-color: #c2c2c2c2; -fx-background-color: Transparent; -fx-border-width:  0.5px;");
+            text.setEditable(true);
         }
     }
 
