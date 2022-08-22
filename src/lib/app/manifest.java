@@ -1,0 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package lib.app;
+
+/**
+ *
+ * @author ISDR
+ */
+public class manifest {
+
+    public static String APP_ICON = "/img/logo.png";
+    public static String APP_DEFAULT_IMG = "/img/default_user.png";
+    public static String APP_TITRE = "EMs Auto service";
+    public static String RAPPORT_LOGO = Files.CreadFolder(null) + "logo_2.png";
+}

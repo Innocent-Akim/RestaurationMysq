@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="69.0" prefWidth="623.0" style="-fx-background-color: Transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.LoadVenteController">
+   <children>
+      <AnchorPane fx:id="data_grid" layoutX="2.0" layoutY="4.0" prefHeight="27.0" prefWidth="621.0" style="-fx-background-radius: 0.5em; -fx-background-color: Transparent;" AnchorPane.bottomAnchor="4.0" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="4.0" AnchorPane.topAnchor="4.0">
+         <children>
+            <Label fx:id="id" alignment="CENTER" layoutX="3.0" layoutY="29.0" prefHeight="18.0" prefWidth="67.0" text="9000000">
+               <font>
+                  <Font name="System Bold" size="11.0" />
+               </font>
+               <graphic>
+                  <Icons525View fill="#f6ad2a" glyphName="WINE_BOTTLE" size="18" />
+               </graphic>
+            </Label>
+            <Label fx:id="designation" layoutX="79.0" layoutY="30.0" prefHeight="18.0" prefWidth="253.0" text="ADALATE 20MG SPÉCIALITÉ/ 30CS ">
+               <graphic>
+                  <MaterialDesignIconView fill="#f6ad2a" glyphName="CHECK" size="18" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="qte" alignment="CENTER" layoutX="405.0" layoutY="25.0" prefHeight="25.0" prefWidth="73.0" style="-fx-background-color: Transparent; -fx-border-width: 0.5px; -fx-border-color: #c2c2c2c2;" text="100000">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </TextField>
+            <Label fx:id="ptotal" alignment="CENTER" layoutX="491.0" layoutY="31.0" prefHeight="18.0" prefWidth="91.0" text="2.000.000" textFill="#f6ad2a">
+               <graphic>
+                  <MaterialDesignIconView fill="#3d1909" glyphName="CHART_LINE" size="18" />
+               </graphic>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="3.0" layoutY="6.0" prefHeight="17.0" prefWidth="67.0" text="N° Fac" textFill="#726c6c" />
+            <Label alignment="CENTER" layoutX="86.0" layoutY="6.0" prefHeight="17.0" prefWidth="240.0" text="Désignation" textFill="#726c6c" />
+            <Label alignment="CENTER" layoutX="334.0" layoutY="6.0" prefHeight="17.0" prefWidth="59.0" text="Punitaire" textFill="#726c6c" />
+            <Label alignment="CENTER" layoutX="402.0" layoutY="6.0" prefHeight="17.0" prefWidth="80.0" text="Quantité" textFill="#726c6c" />
+            <Label alignment="CENTER" layoutX="510.0" layoutY="5.0" prefHeight="17.0" prefWidth="73.0" text="Ptotal" textFill="#726c6c" />
+            <AnchorPane layoutX="584.0" layoutY="32.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #3D1909; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="7.0">
+               <children>
+                  <FontAwesomeIconView fx:id="btl_modifier" fill="WHITE" glyphName="EDIT" layoutX="5.0" layoutY="14.0" size="15">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIconView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <AnchorPane layoutX="584.0" layoutY="9.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #DC511D; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="7.0">
+               <children>
+                  <FontAwesomeIconView fx:id="btn_annProduit" fill="WHITE" glyphName="TIMES" layoutX="6.0" layoutY="14.0" onMouseClicked="#retireProduitFac" size="15">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></FontAwesomeIconView>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </AnchorPane>
+            <TextField fx:id="pu" alignment="CENTER" layoutX="334.0" layoutY="26.0" prefHeight="17.0" prefWidth="59.0" style="-fx-background-color: Transparent; -fx-border-color: #c2c2c2c2; -fx-border-width: 0.25;" text="2.5">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></TextField>
+            <Label fx:id="idFacture" layoutX="72.0" layoutY="6.0" text="Label" textFill="TRANSPARENT" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <Separator layoutY="66.0" prefWidth="200.0" style="-fx-background-color: #3D1909;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+   </children>
+</AnchorPane>
