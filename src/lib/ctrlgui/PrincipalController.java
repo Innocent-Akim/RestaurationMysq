@@ -84,14 +84,15 @@ public class PrincipalController implements Initializable {
                 System.out.print(ex.getMessage());
             }
         });
+
+        b_rapport.setOnMouseClicked((event) -> {
+            App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
+//            View.instance().setContaint(screen, View.RAPPORT);
+
+        });
         b_parametre.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_parametre, b_rapport, b_operation, b_dash);
             View.instance().setContaint(screen, View.PARAMETRES);
-        });
-        b_rapport.setOnMouseClicked((event) -> {
-            App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
-            View.instance().setContaint(screen, View.RAPPORT);
-
         });
 
     }

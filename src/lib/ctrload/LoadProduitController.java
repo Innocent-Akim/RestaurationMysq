@@ -63,14 +63,17 @@ public class LoadProduitController implements Initializable {
         codeBarLbl.setText(codeBaString.trim());
         index.setText(designationString.substring(0, 2));
         categoriecbx.setVisible(false);
+        Neurohub.neurohub.initFieldClean(designationFld, punitaire, categorieFld);
         Datasource.loadCombo(categoriecbx, "SELECT designation FROM `categorie` WHERE refEntreprise='" + Datasource.refEntreprise + "'");
         btn_modifier.setOnAction((e) -> {
-            categoriecbx.setValue(categorieFld.getText());
+            if (isUpdate == false) {
+                categoriecbx.setValue(categorieFld.getText());
+            }
             categorieFld.setVisible(false);
             categoriecbx.setVisible(true);
+            Neurohub.neurohub.initFieldActive(designationFld, punitaire);
             if (isUpdate == true) {
-                Neurohub.neurohub.initFieldClean(designationFld, punitaire, categorieFld);
-                Neurohub.neurohub.initFieldActive(designationFld, punitaire, categorieFld);
+
                 categorieFld.setText(categoriecbx.getValue().trim());
                 String refCategorie = Datasource.getValue("SELECT code FROM categorie WHERE refEntreprise='" + Datasource.refEntreprise + "' AND designation='" + categorieFld.getText() + "'");
                 boolean status = Datasource.execute("UPDATE `produits` SET `designation`=?,`pu`=?,`codeCategorie`=? WHERE code=?", designationFld.getText(), punitaire.getText(), refCategorie, codeBarLbl.getText().trim());
