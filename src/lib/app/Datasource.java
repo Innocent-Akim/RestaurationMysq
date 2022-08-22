@@ -27,7 +27,7 @@ public class Datasource extends Dbconnect {
             int i = 1;
             if (param != null) {
                 for (String string : param) {
-                    preparedStatement.setString(i, string.toUpperCase());
+                    preparedStatement.setString(i, string.trim().toUpperCase());
                     i++;
                 }
             }

@@ -73,7 +73,6 @@ public class LoadProduitController implements Initializable {
             categoriecbx.setVisible(true);
             Neurohub.neurohub.initFieldActive(designationFld, punitaire);
             if (isUpdate == true) {
-
                 categorieFld.setText(categoriecbx.getValue().trim());
                 String refCategorie = Datasource.getValue("SELECT code FROM categorie WHERE refEntreprise='" + Datasource.refEntreprise + "' AND designation='" + categorieFld.getText() + "'");
                 boolean status = Datasource.execute("UPDATE `produits` SET `designation`=?,`pu`=?,`codeCategorie`=? WHERE code=?", designationFld.getText(), punitaire.getText(), refCategorie, codeBarLbl.getText().trim());

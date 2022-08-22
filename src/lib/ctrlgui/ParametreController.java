@@ -53,26 +53,19 @@ public class ParametreController implements Initializable {
     }
 
     void initEvent() {
-
-//        View.instance().setContaint(screen, View.PERSONNE);
-//        View.instance().setContaint(screen, View.SETTINGS);
+        View.instance().setContaint(screen, View.PERSONNE);
         App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
-
         personnel.setOnMouseClicked((Action) -> {
             indice.setLayoutY(90);
             App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
             View.instance().setContaint(screen, View.PERSONNE);
-//            ecran_remove(screen, "/lib/screen/loadPersonne.fxml");
         });
         utilisateur.setOnMouseClicked((Action) -> {
             indice.setLayoutY(130);
             App.getInstance().IsSeleted(utilisateur, personnel, fonction, configuration);
-//            View.instance().setContaint(screen, View.UTILISATEUR);
-
         });
         fonction.setOnMouseClicked((Action) -> {
 
-//            View.instance().setContaint(screen, View.FONCTION);
             indice.setLayoutY(170);
             App.getInstance().IsSeleted(fonction, personnel, utilisateur, configuration);
 
@@ -80,7 +73,6 @@ public class ParametreController implements Initializable {
         configuration.setOnMouseClicked((Action) -> {
             indice.setLayoutY(210);
 
-//            View.instance().setContaint(screen, View.CONFIGURATION);
             App.getInstance().IsSeleted(configuration, personnel, utilisateur, fonction);
 
         });

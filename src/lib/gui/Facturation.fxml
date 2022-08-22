@@ -30,7 +30,7 @@
                   <FontAwesomeIconView fill="WHITE" glyphName="STEAM_SQUARE" size="22" />
                </graphic>
             </Label>
-            <AnchorPane layoutX="50.0" prefHeight="49.0" prefWidth="281.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="50.0">
+            <AnchorPane layoutX="50.0" prefHeight="49.0" prefWidth="274.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="50.0">
                <effect>
                   <DropShadow blurType="GAUSSIAN" color="#c6c6c6" height="6.0" offsetX="0.5" offsetY="0.5" radius="2.5" width="6.0" />
                </effect>
@@ -77,9 +77,9 @@
             </GridPane>
          </children>
       </AnchorPane>
-      <HBox alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="52.0" prefHeight="467.0" prefWidth="341.0" style="-fx-background-color: #F7F8FB;" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="52.0">
+      <HBox alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="52.0" prefHeight="467.0" prefWidth="341.0" style="-fx-background-color: #F7F8FB; -fx-background-radius: 10px;" AnchorPane.bottomAnchor="51.0" AnchorPane.leftAnchor="3.0" AnchorPane.topAnchor="52.0">
          <children>
-            <AnchorPane prefHeight="569.0" prefWidth="339.0" style="-fx-background-color: #F7F8FB;">
+            <AnchorPane prefHeight="569.0" prefWidth="339.0" style="-fx-background-color: #F7F8FB; -fx-background-radius: 10px;">
                <children>
                   <Text fill="#484778" layoutX="237.99978721141815" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURE-ID" textAlignment="CENTER" wrappingWidth="89.9999874830246" AnchorPane.rightAnchor="25.00022530555725">
                      <font>
@@ -93,7 +93,7 @@
                            <children>
                               <AnchorPane layoutX="9.0" layoutY="30.0" prefHeight="14.0" prefWidth="274.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
                                  <children>
-                                    <TextField fx:id="code_client" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="256.0" promptText="ORDINAIRE" style="-fx-background-color: #FFF;">
+                                    <TextField fx:id="nom" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="256.0" promptText="ORDINAIRE" style="-fx-background-color: #FFF;">
                                        <font>
                                           <Font name="Century Gothic Bold" size="12.0" />
                                        </font>
@@ -183,8 +183,11 @@
                               </Text>
                               <JFXButton fx:id="enregitrebtn" buttonType="RAISED" layoutX="10.0" layoutY="251.0" prefHeight="28.0" prefWidth="274.0" style="-fx-border-width: 0.5px; -fx-border-radius: 5px; -fx-background-color: #fff; -fx-background-radius: 5px;" text="Ajouter" textFill="#f6ad2a">
                                  <font>
-                                    <Font name="Century Gothic Bold" size="13.0" />
+                                    <Font name="Century Gothic" size="13.0" />
                                  </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
                               </JFXButton>
                            </children>
                         </AnchorPane>
@@ -282,7 +285,7 @@
             <DropShadow color="WHITE" />
          </effect>
       </AnchorPane>
-      <AnchorPane layoutX="-2.0" layoutY="512.0" prefHeight="48.0" prefWidth="879.0" style="-fx-border-color: F4F4F7; -fx-border-width: 0.3 0 0 0;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="-2.0" AnchorPane.rightAnchor="2.0">
+      <AnchorPane layoutX="-2.0" layoutY="518.0" prefHeight="48.0" prefWidth="879.0" style="-fx-border-color: F4F4F7; -fx-border-width: 0.3 0 0 0;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <effect>
             <DropShadow blurType="GAUSSIAN" color="#c6c6c6" height="6.0" offsetX="0.5" offsetY="0.5" radius="2.5" width="6.0" />
          </effect>
@@ -327,8 +330,14 @@
             </Label>
          </children>
       </AnchorPane>
-      <ListView fx:id="listClient" layoutX="38.0" layoutY="178.0" prefHeight="28.0" prefWidth="492.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="364.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="178.0" />
-      <ListView fx:id="listproduit_search" layoutX="38.0" layoutY="225.0" onMouseClicked="#mouse_exit_false" prefHeight="48.0" prefWidth="513.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="295.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="227.0" />
+      <ListView fx:id="listClient" focusTraversable="false" layoutX="37.0" layoutY="177.0" prefHeight="27.0" prefWidth="492.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="366.0" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="177.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
+      <ListView fx:id="listproduit_search" focusTraversable="false" layoutX="38.0" layoutY="225.0" onMouseClicked="#mouse_exit_false" prefHeight="25.0" prefWidth="513.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="227.0">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></ListView>
       <AnchorPane layoutX="4.0" layoutY="55.0" prefHeight="53.0" prefWidth="200.0" style="-fx-background-color: #F7F8FB;" AnchorPane.leftAnchor="4.0">
          <children>
             <AnchorPane layoutY="38.0" prefHeight="6.0" prefWidth="200.0" style="-fx-background-color: #421f06;">

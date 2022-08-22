@@ -44,12 +44,29 @@ public class LoadPersonneController implements Initializable {
     @FXML
     private Label iduser;
 
+    public static String nomString, telephoneString, adresseString, prefixNameString, codeIdeString, lbl_titleString;
+
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-    }    
-    
+        nom.setText(nomString.trim());
+        telephone.setText(telephoneString.trim());
+        adresse.setText(adresseString.trim());
+        codeIde.setText(codeIdeString.trim());
+        prefixName.setText(nomString.substring(0, 1));
+        activeUser.setVisible(false);
+        lbl_title.setText(lbl_titleString.trim());
+        if (lbl_title.getText().equals("AGENTS")) {
+            card.setOnMouseEntered((action) -> {
+                activeUser.setVisible(true);
+            });
+            card.setOnMouseExited((action) -> {
+                activeUser.setVisible(false);
+            });
+        }
+
+    }
+
 }
