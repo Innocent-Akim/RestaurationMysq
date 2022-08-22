@@ -3,7 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import com.jfoenix.controls.JFXListView?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
@@ -43,7 +43,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="agent" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #01a7e3;" text="Agents" textFill="WHITE">
+                  <JFXButton fx:id="agent" onMouseClicked="#LoadDataForDay" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: #01a7e3;" text="Agents" textFill="WHITE">
                      <font>
                         <Font name="Century Gothic Bold" size="13.0" />
                      </font>
@@ -66,7 +66,7 @@
                   </Text>
                   <AnchorPane prefHeight="28.0" prefWidth="245.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
                      <children>
-                        <TextField fx:id="nom" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le nom" style="-fx-background-color: #FFF;">
+                        <TextField fx:id="nom" layoutX="17.0" layoutY="1.0" onKeyReleased="#keyPressed_" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le nom" style="-fx-background-color: #FFF;">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
@@ -88,12 +88,12 @@
                   </Text>
                   <AnchorPane prefHeight="28.0" prefWidth="245.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
                      <children>
-                        <TextField fx:id="contact" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le contact" style="-fx-background-color: #FFF;">
+                        <TextField fx:id="contact" layoutX="17.0" layoutY="1.0" onKeyReleased="#keyPressed_" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le contact" style="-fx-background-color: #FFF;">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
                         </TextField>
-                        <MaterialIconView fill="#f6ad2a" glyphName="PHONE" layoutX="2.0" layoutY="22.0" size="17" />
+                        <MaterialDesignIconView fill="#f6ad2a" glyphName="CELLPHONE_ANDROID" layoutX="5.0" layoutY="19.0" size="15" />
                      </children>
                      <effect>
                         <DropShadow color="WHITE" />
@@ -110,12 +110,12 @@
                   </Text>
                   <AnchorPane prefHeight="28.0" prefWidth="245.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
                      <children>
-                        <TextField fx:id="adresse" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="227.0" promptText="Entrer l'adresse" style="-fx-background-color: #FFF;">
+                        <TextField fx:id="adresse" layoutX="17.0" layoutY="1.0" onKeyReleased="#keyPressed_" prefHeight="26.0" prefWidth="227.0" promptText="Entrer l'adresse" style="-fx-background-color: #FFF;">
                            <font>
                               <Font name="Century Gothic" size="12.0" />
                            </font>
                         </TextField>
-                        <MaterialIconView fill="#f6ad2a" glyphName="PUBLIC" layoutX="3.0" layoutY="22.0" size="17" />
+                        <MaterialDesignIconView fill="#f6ad2a" glyphName="SORT_VARIANT" layoutX="6.0" layoutY="19.0" size="15" text="" />
                      </children>
                      <effect>
                         <DropShadow color="WHITE" />
@@ -123,7 +123,7 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <JFXButton fx:id="btaction" buttonType="RAISED" layoutX="9.0" layoutY="172.0" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #f6ad2a;" styleClass="cursor" text="Enregistrer" textFill="WHITE">
+            <JFXButton fx:id="btaction" buttonType="RAISED" layoutX="9.0" layoutY="172.0" onMouseClicked="#action" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #f6ad2a;" styleClass="cursor" text="Enregistrer" textFill="WHITE">
                <font>
                   <Font name="Century Gothic Bold" size="14.0" />
                </font>

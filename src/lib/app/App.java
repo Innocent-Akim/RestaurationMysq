@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.net.URL;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
@@ -54,5 +55,19 @@ public class App {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public void SelectDataFor(Button... bt) {
+        try {
+            for (Button tr : bt) {
+                tr.setStyle("-fx-background-color: #fff;-fx-text-fill: #000000;");
+                tr.setFont(Font.font("Century Gothic", FontPosture.REGULAR, 13));
+            }
+            bt[0].setStyle("-fx-background-color: #F6AD2A;-fx-text-fill: #fff;");
+            bt[0].setFont(Font.font("Century Gothic", FontWeight.BOLD, 13));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 }

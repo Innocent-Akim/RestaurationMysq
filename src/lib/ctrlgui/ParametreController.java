@@ -61,7 +61,7 @@ public class ParametreController implements Initializable {
         personnel.setOnMouseClicked((Action) -> {
             indice.setLayoutY(90);
             App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
-//            View.instance().setContaint(screen, View.PERSONNE);
+            View.instance().setContaint(screen, View.PERSONNE);
 //            ecran_remove(screen, "/lib/screen/loadPersonne.fxml");
         });
         utilisateur.setOnMouseClicked((Action) -> {

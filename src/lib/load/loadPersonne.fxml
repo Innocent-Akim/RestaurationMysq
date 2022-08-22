@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="card" prefHeight="86.0" prefWidth="305.0" style="-fx-background-color: Transparent;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.LoadPersonneController">
+   <children>
+      <GridPane hgap="5.0" layoutX="35.0" layoutY="22.0" prefHeight="39.0" prefWidth="256.0" vgap="4.0" AnchorPane.leftAnchor="35.0" AnchorPane.rightAnchor="14.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label fx:id="nom" prefHeight="20.0" prefWidth="336.0" text="KIGHUNDILA WAKOMYA CHADRAC" textFill="#5a6573">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <graphic>
+                  <MaterialDesignIconView glyphName="ACCOUNT" size="15" />
+               </graphic>
+            </Label>
+            <Label fx:id="telephone" prefHeight="17.0" prefWidth="354.0" text="+243 977748166" textFill="#b6b6b6" GridPane.rowIndex="1">
+               <graphic>
+                  <MaterialDesignIconView fill="#ff1e1e" glyphName="PHONE" size="15" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="adresse" prefHeight="17.0" prefWidth="244.0" text="adresse" textFill="#b6b6b6" GridPane.rowIndex="2">
+               <graphic>
+                  <FontAwesomeIconView fill="#f6ad2a" glyphName="SHARE_SQUARE_ALT" size="15" />
+               </graphic>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+      <JFXButton fx:id="modifier" layoutX="236.0" layoutY="59.0" prefHeight="17.0" prefWidth="63.0" style="-fx-background-color: F6AD2A;" text="Modifier" textFill="WHITE" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="6.0">
+         <font>
+            <Font name="Century Gothic" size="11.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </JFXButton>
+      <Label fx:id="prefixName" alignment="CENTER" layoutX="3.0" layoutY="25.0" prefHeight="31.0" prefWidth="31.0" style="-fx-background-color: #3D1909; -fx-background-radius: 20px;" text="K" textFill="WHITE" AnchorPane.leftAnchor="3.0">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="codeIde" layoutX="209.0" layoutY="2.0" prefHeight="17.0" prefWidth="89.0" textFill="TRANSPARENT" />
+      <Label fx:id="lbl_title" layoutX="118.0" layoutY="76.0" prefHeight="17.0" prefWidth="56.0" />
+      <JFXCheckBox fx:id="activeUser" checkedColor="#3d1909" layoutY="71.0" prefHeight="17.0" prefWidth="119.0" text="Active" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="0.0">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </JFXCheckBox>
+      <Label fx:id="index" layoutX="195.0" layoutY="68.0" text="Label" textFill="TRANSPARENT" />
+      <Label fx:id="iduser" layoutX="14.0" layoutY="2.0" text="Label" textFill="TRANSPARENT" />
+   </children>
+</AnchorPane>

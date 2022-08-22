@@ -16,6 +16,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
+import lib.app.App;
 
 /**
  * FXML Controller class
@@ -49,9 +50,28 @@ public class PersonneController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
+        App.getInstance().SelectDataFor(agent, client);
+        etiquette.setText("Agents");
+        agent.setOnAction((action) -> {
+            App.getInstance().SelectDataFor(agent, client);
+            etiquette.setText("Agents");
+        });
+        client.setOnAction((action) -> {
+            App.getInstance().SelectDataFor(client, agent);
+            etiquette.setText("Clients");
+        });
+    }
 
+    @FXML
+    private void LoadDataForDay(MouseEvent event) {
+    }
 
+    @FXML
+    private void keyPressed_(KeyEvent event) {
+    }
 
-    
+    @FXML
+    private void action(MouseEvent event) {
+    }
+
 }
