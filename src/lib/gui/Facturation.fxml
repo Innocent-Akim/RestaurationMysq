@@ -215,7 +215,7 @@
                      </cursor>
                   </JFXButton>
                   <MaterialDesignIconView fill="#421f06" glyphName="ACCOUNT_CIRCLE" layoutX="215.0" layoutY="84.0" size="25" />
-                  <Label fx:id="client_nom" contentDisplay="CENTER" layoutX="240.0" layoutY="67.0" prefHeight="16.0" prefWidth="75.0" text="2" textFill="#0d0d0d00">
+                  <Label fx:id="client_nom" contentDisplay="CENTER" layoutX="240.0" layoutY="67.0" prefHeight="16.0" prefWidth="75.0" text="2" textFill="#0d0d0d">
                      <font>
                         <Font name="Century Gothic Bold" size="13.0" />
                      </font>
@@ -330,11 +330,11 @@
             </Label>
          </children>
       </AnchorPane>
-      <ListView fx:id="listClient" focusTraversable="false" layoutX="37.0" layoutY="177.0" prefHeight="27.0" prefWidth="492.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="366.0" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="177.0">
+      <ListView fx:id="listClient" focusTraversable="false" layoutX="37.0" layoutY="177.0" prefHeight="391.0" prefWidth="492.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="2.0" AnchorPane.leftAnchor="37.0" AnchorPane.topAnchor="177.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ListView>
-      <ListView fx:id="listproduit_search" focusTraversable="false" layoutX="38.0" layoutY="225.0" onMouseClicked="#mouse_exit_false" prefHeight="25.0" prefWidth="513.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="318.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="227.0">
+      <ListView fx:id="listproduit_search" focusTraversable="false" layoutX="38.0" layoutY="225.0" onMouseClicked="#mouse_exit_false" prefHeight="346.0" prefWidth="513.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="-3.0" AnchorPane.leftAnchor="38.0" AnchorPane.topAnchor="227.0">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></ListView>

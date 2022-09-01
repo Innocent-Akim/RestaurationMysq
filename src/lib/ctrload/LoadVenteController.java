@@ -21,7 +21,7 @@ import javafx.scene.layout.AnchorPane;
  * @author ISDR
  */
 public class LoadVenteController implements Initializable {
-
+    
     @FXML
     private AnchorPane data_grid;
     @FXML
@@ -40,15 +40,22 @@ public class LoadVenteController implements Initializable {
     private Label idFacture;
     @FXML
     private TextField qte;
+    public static String designationString, qteString, ptString, puString, idFactureString, idString;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        designation.setText(designationString);
+        qte.setText(qteString);
+        pu.setText(puString);
+        ptotal.setText(ptString);
+        idFacture.setText(idFactureString);
+        id.setText(idString);
         // TODO
-    }    
-
+    }
+    
     @FXML
     private void retireProduitFac(MouseEvent event) {
     }

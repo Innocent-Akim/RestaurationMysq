@@ -10,7 +10,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.ListView;
 import lib.dbconnect.Dbconnect;
 
 /**
@@ -19,7 +18,7 @@ import lib.dbconnect.Dbconnect;
  */
 public class Datasource extends Dbconnect {
 
-    public static String refEntreprise = "1";
+    public static String refEntreprise = Vars.vars.getRefEntreprise();
 
     public static boolean execute(String query, String... param) {
         try {
@@ -47,8 +46,9 @@ public class Datasource extends Dbconnect {
             if (resultSet.next()) {
                 return resultSet.getString(1);
             }
-        } catch (SQLException e) {
-            Files.error(query + "==>Error " + e.getMessage());
+        } catch (SQLException ex) {
+            Files.error(query + "==>Error " + ex.getMessage());
+            ex.printStackTrace();
         }
         return null;
     }

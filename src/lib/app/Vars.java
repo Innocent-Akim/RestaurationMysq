@@ -56,5 +56,5 @@ public class Vars {
     public void setRefEntreprise(String refEntreprise) {
         this.refEntreprise = refEntreprise;
     }
-    
+    public static Vars vars = new Vars();
 }
