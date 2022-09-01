@@ -30,7 +30,7 @@ import lib.app.Vars;
  * @author ISDR
  */
 public class LoginController implements Initializable {
-    
+
     @FXML
     private StackPane fenetreLogin;
     @FXML
@@ -68,17 +68,17 @@ public class LoginController implements Initializable {
         // TODO
         initEvent();
     }
-    
+
     void initEvent() {
         btnConnecter.setOnAction((event) -> {
             Vars.vars.setCode("1");
-            stage.setContent(View.instance().get(View.PRINCIPARE));
-            
+            stage.setContent(View.instance().get(View.MENU));
+
         });
     }
-    
+
     @FXML
     private void switchCreate(MouseEvent event) {
     }
-    
+
 }

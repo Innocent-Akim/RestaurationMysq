@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="850.0" style="-fx-background-color: #F7F8FB;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrlgui.V_FacturationController">
+   <children>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="5.0" layoutY="8.0" prefHeight="23.0" prefWidth="164.0" text="TABLE DISPONIBLES" textFill="#f59e0b" AnchorPane.leftAnchor="5.0">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="ListClient" layoutX="5.0" layoutY="51.0" prefHeight="625.0" prefWidth="164.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="55.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXListView>
+      <JFXListView fx:id="ListCagorie" layoutX="178.0" layoutY="55.0" prefHeight="625.0" prefWidth="209.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="178.0" AnchorPane.topAnchor="55.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXListView>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="178.0" layoutY="8.0" prefHeight="23.0" prefWidth="209.0" text="CATEGOTERIE" textFill="#f59e0b">
+         <font>
+            <Font name="Century Gothic Bold" size="18.0" />
+         </font>
+      </Label>
+      <JFXListView fx:id="ListProduit" layoutX="396.0" layoutY="55.0" prefHeight="625.0" prefWidth="270.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="396.0" AnchorPane.rightAnchor="184.0" AnchorPane.topAnchor="55.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXListView>
+      <JFXListView fx:id="ListFacture" layoutX="582.0" layoutY="55.0" prefHeight="625.0" prefWidth="174.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="55.0">
+         <effect>
+            <Shadow />
+         </effect>
+      </JFXListView>
+   </children>
+</AnchorPane>

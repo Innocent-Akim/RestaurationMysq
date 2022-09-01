@@ -47,6 +47,7 @@ public class View {
     public static String RAPPORT = "Rapports";
     public static String PRODUITS = "Produits";
     public static String PERSONNE = "Personnel";
+    public static String MENU = "Menu";
     private static View instance;
 
     private String getUri(String uri) {
@@ -64,6 +65,7 @@ public class View {
         map.put(ERROR, getUri(ERROR));
         map.put(LANDGINGPAGE, getUri(LANDGINGPAGE));
         map.put(PERSONNE, getUri(PERSONNE));
+        map.put(MENU, getUri(MENU));
     }
 
     public static View instance() {

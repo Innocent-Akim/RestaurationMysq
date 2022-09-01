@@ -5,7 +5,7 @@
  */
 package lib.ctrlgui;
 
-import com.jfoenix.controls.JFXButton;
+import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
@@ -16,14 +16,16 @@ import javafx.fxml.Initializable;
  *
  * @author ISDR
  */
-public class MenuController implements Initializable {
+public class V_FacturationController implements Initializable {
 
     @FXML
-    private JFXButton btn_facturation;
+    private JFXListView<?> ListClient;
     @FXML
-    private JFXButton btn_rapport;
+    private JFXListView<?> ListCagorie;
     @FXML
-    private JFXButton btn_settings;
+    private JFXListView<?> ListProduit;
+    @FXML
+    private JFXListView<?> ListFacture;
 
     /**
      * Initializes the controller class.
@@ -31,6 +33,6 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }
-
+    }    
+    
 }
