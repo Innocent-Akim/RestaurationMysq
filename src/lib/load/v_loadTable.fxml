@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="51.0" prefWidth="133.0" style="-fx-border-width: 0.25px; -fx-background-color: Transparent;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadTableController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="3.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: #f59e0b; -fx-background-radius: 30px;" AnchorPane.leftAnchor="1.0">
+         <children>
+            <Label fx:id="id" alignment="CENTER" layoutX="-2.0" layoutY="4.0" prefHeight="31.0" prefWidth="41.0" text="01" textFill="WHITE" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Label fx:id="nameClient" layoutX="50.25" layoutY="14.0" prefHeight="18.0" prefWidth="85.0" text="ORDINAIRE" AnchorPane.leftAnchor="50.25" AnchorPane.rightAnchor="4.25">
+         <font>
+            <Font name="Century Gothic Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</AnchorPane>

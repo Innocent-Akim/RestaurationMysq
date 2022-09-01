@@ -9,6 +9,7 @@ import com.jfoenix.controls.JFXListView;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 
 /**
@@ -33,6 +34,18 @@ public class V_FacturationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-    }    
-    
+        initLoad();
+
+    }
+
+    void initLoad() {
+        try {
+            ListClient.getItems().clear();
+            for (int x = 0; x < 10; x++) {
+                ListClient.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadTable.fxml")));
+            }
+        } catch (Exception ex) {
+        }
+    }
+
 }

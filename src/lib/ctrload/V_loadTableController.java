@@ -3,29 +3,25 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package lib.ctrlgui;
+package lib.ctrload;
 
-import com.jfoenix.controls.JFXButton;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import static lib.Main.Main.stage;
-import lib.Main.View;
+import javafx.scene.control.Label;
 
 /**
  * FXML Controller class
  *
  * @author ISDR
  */
-public class MenuController implements Initializable {
+public class V_loadTableController implements Initializable {
 
     @FXML
-    private JFXButton btn_facturation;
+    private Label id;
     @FXML
-    private JFXButton btn_rapport;
-    @FXML
-    private JFXButton btn_settings;
+    private Label nameClient;
 
     /**
      * Initializes the controller class.
@@ -33,13 +29,6 @@ public class MenuController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        initEvent();
-    }
-
-    void initEvent() {
-        btn_facturation.setOnAction((action) -> {
-            stage.setContent(View.instance().get(View.V_FACTURE));
-
-        });
-    }
+    }    
+    
 }
