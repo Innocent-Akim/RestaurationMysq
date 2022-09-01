@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.load.V_loadCategorieController">
-    
+
+<AnchorPane id="AnchorPane" fx:id="cardCategorie" prefHeight="51.0" prefWidth="133.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadCategorieController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="51.0" prefWidth="133.0" style="-fx-border-width: 0.25px; -fx-background-color: Transparent;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="6.0" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: #f59e0b; -fx-background-radius: 30px;" AnchorPane.leftAnchor="0.0">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE" layoutX="6.0" layoutY="26.0" size="25" />
+               </children>
+            </AnchorPane>
+            <Label fx:id="nameCategorie" layoutX="37.0" layoutY="14.0" prefHeight="18.0" prefWidth="97.0" text="NOURRITURES" AnchorPane.leftAnchor="37.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="id" layoutX="35.0" layoutY="33.0" text="Label" textFill="TRANSPARENT" AnchorPane.leftAnchor="0.0" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
 </AnchorPane>

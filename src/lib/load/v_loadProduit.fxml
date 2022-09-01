@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="87.0" prefWidth="223.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadProduitController">
+   <children>
+      <AnchorPane layoutX="-1.0" layoutY="2.0" prefHeight="93.0" prefWidth="224.0" style="-fx-background-color: Transparent; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="designation" alignment="CENTER" layoutX="2.0" layoutY="6.0" prefHeight="17.0" prefWidth="187.0" text="FOUFOU NYAMA" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="pu" alignment="CENTER" contentDisplay="CENTER" layoutY="45.0" prefHeight="31.0" prefWidth="222.0" text="10000" textFill="#f59e0b" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label fx:id="categorie" alignment="CENTER" contentDisplay="CENTER" layoutY="27.0" prefHeight="17.0" prefWidth="222.0" text="NOURRITURES" textFill="#837c7c" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+               <font>
+                  <Font name="Century Gothic Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="etat" layoutX="3.0" layoutY="75.0" prefHeight="17.0" prefWidth="87.0" text="Disponible" textFill="#3dc3a6" AnchorPane.leftAnchor="3.0" />
+            <Label fx:id="id" layoutX="14.0" layoutY="47.0" text="Label" textFill="TRANSPARENT" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>

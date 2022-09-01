@@ -72,6 +72,7 @@ public class LoginController implements Initializable {
     void initEvent() {
         btnConnecter.setOnAction((event) -> {
             Vars.vars.setCode("1");
+            Vars.vars.setRefEntreprise("1");
             stage.setContent(View.instance().get(View.MENU));
 
         });

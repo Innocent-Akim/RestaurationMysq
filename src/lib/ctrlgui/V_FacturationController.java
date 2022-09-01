@@ -6,11 +6,19 @@
 package lib.ctrlgui;
 
 import com.jfoenix.controls.JFXListView;
+import java.io.IOException;
 import java.net.URL;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
+import lib.app.App;
+import lib.app.Datasource;
+import lib.ctrload.V_loadCategorieController;
+import lib.ctrload.V_loadTableController;
 
 /**
  * FXML Controller class
@@ -27,6 +35,10 @@ public class V_FacturationController implements Initializable {
     private JFXListView<?> ListProduit;
     @FXML
     private JFXListView<?> ListFacture;
+    public static JFXListView<?> ListProduitView;
+    @FXML
+    private Label namero;
+    public static Label nameroLabel;
 
     /**
      * Initializes the controller class.
@@ -34,18 +46,38 @@ public class V_FacturationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        nameroLabel = namero;
+        ListProduitView = ListProduit;
         initLoad();
 
     }
 
     void initLoad() {
         try {
-            ListClient.getItems().clear();
-            for (int x = 0; x < 10; x++) {
+
+            int index = 0;
+
+            Datasource.cleanList(ListClient, ListCagorie, ListProduit, ListFacture);
+            ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "'");
+            while (rs.next()) {
+                index++;
+                if (index < 10) {
+                    V_loadTableController.idString = "0" + String.valueOf(index);
+                } else {
+                    V_loadTableController.idString = String.valueOf(index);
+                }
+
+                V_loadTableController.nameClientString = rs.getString("nom").trim().toUpperCase();
                 ListClient.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadTable.fxml")));
             }
-        } catch (Exception ex) {
+            ResultSet rst = Datasource.getrResultat("SELECT * FROM categorie WHERE refEntreprise='" + Datasource.refEntreprise + "'");
+            while (rst.next()) {
+                V_loadCategorieController.nameCategorieString = rst.getString("designation").trim().toUpperCase();
+                V_loadCategorieController.idCodString = rst.getString("code").trim().toUpperCase();
+                ListCagorie.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadCategorie.fxml")));
+            }
+        } catch (IOException | SQLException ex) {
+            ex.printStackTrace();
         }
     }
-
 }
