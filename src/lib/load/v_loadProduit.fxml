@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="87.0" prefWidth="223.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadProduitController">
+<AnchorPane id="AnchorPane" fx:id="cardProduit" prefHeight="87.0" prefWidth="223.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadProduitController">
    <children>
       <AnchorPane layoutX="-1.0" layoutY="2.0" prefHeight="93.0" prefWidth="224.0" style="-fx-background-color: Transparent; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label fx:id="designation" alignment="CENTER" layoutX="2.0" layoutY="6.0" prefHeight="17.0" prefWidth="187.0" text="FOUFOU NYAMA" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="0.0">
+            <Label fx:id="designation" alignment="CENTER" layoutX="2.0" layoutY="6.0" prefHeight="17.0" prefWidth="187.0" text="FOUFOU NYAMA" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
                <font>
                   <Font name="Century Gothic Bold" size="15.0" />
                </font>
@@ -27,6 +28,30 @@
             </Label>
             <Label fx:id="etat" layoutX="3.0" layoutY="75.0" prefHeight="17.0" prefWidth="87.0" text="Disponible" textFill="#3dc3a6" AnchorPane.leftAnchor="3.0" />
             <Label fx:id="id" layoutX="14.0" layoutY="47.0" text="Label" textFill="TRANSPARENT" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="btn_add" layoutX="196.0" layoutY="73.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #3D1909; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="3.0">
+         <children>
+            <FontAwesomeIconView fx:id="btl_modifier" fill="WHITE" glyphName="EDIT" layoutX="5.0" layoutY="14.0" size="15">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="btn_close" layoutX="196.0" layoutY="50.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #DC511D; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="3.0">
+         <children>
+            <FontAwesomeIconView fx:id="btn_annProduit" fill="WHITE" glyphName="TIMES" layoutX="6.0" layoutY="14.0" onMouseClicked="#retireProduitFac" size="15">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </FontAwesomeIconView>
          </children>
          <cursor>
             <Cursor fx:constant="HAND" />

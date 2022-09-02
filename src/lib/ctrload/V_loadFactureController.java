@@ -41,7 +41,6 @@ public class V_loadFactureController implements Initializable {
         numero.setText(numString.trim());
         montant.setText(montantString.trim());
         client.setText(clientString.trim());
-
         cardFacture.setOnMouseClicked((action) -> {
 
         });

@@ -12,6 +12,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import lib.app.Datasource;
+import lib.app.Neurohub;
 import lib.app.Vars;
 import lib.ctrlgui.V_FacturationController;
 
@@ -38,23 +39,10 @@ public class V_loadTableController implements Initializable {
         id.setText(idString);
         nameClient.setText(nameClientString);
         cardTable.setOnMouseClicked((action) -> {
-            V_FacturationController.nameroLabel.setText(exec());
+            V_FacturationController.nameroLabel.setText(Neurohub.neurohub.createFacture(nameClient.getText()));
         });
         // TODO
     }
 
-    String exec() {
-        try {
-            String fact = Datasource.getValue("SELECT COALESCE(MAX(code),0)+1 FROM entetefacture WHERE refEntreprise='" + Datasource.refEntreprise + "'");
-            String codeClient = Datasource.getValue("SELECT code FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "' AND nom='" + nameClient.getText() + "'");
-            boolean status = Datasource.execute(" INSERT INTO `entetefacture` SET `code`=?,`montant`=?,`codeClient`=?,`codeAgent`=?,`refEntreprise`=?", fact, "0", codeClient, Vars.vars.getCode(), Datasource.refEntreprise);
-            if (status) {
-                return Datasource.getValue("SELECT MAX(code) FROM `entetefacture` WHERE refEntreprise='" + Datasource.refEntreprise + "'");
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
 }

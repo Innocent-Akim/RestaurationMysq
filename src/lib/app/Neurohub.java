@@ -214,5 +214,20 @@ public class Neurohub {
         return new java.sql.Date(dateToConvert.getTime()).toLocalDate();
 
     }
+
+    public String createFacture(String name) {
+        try {
+            String fact = Datasource.getValue("SELECT COALESCE(MAX(code),0)+1 FROM entetefacture WHERE refEntreprise='" + Datasource.refEntreprise + "'");
+            String codeClient = Datasource.getValue("SELECT code FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "' AND nom='" + name + "'");
+            boolean status = Datasource.execute(" INSERT INTO `entetefacture` SET `code`=?,`montant`=?,`codeClient`=?,`codeAgent`=?,`refEntreprise`=?", fact, "0", codeClient, Vars.vars.getCode(), Datasource.refEntreprise);
+            if (status) {
+                return Datasource.getValue("SELECT MAX(code) FROM `entetefacture` WHERE refEntreprise='" + Datasource.refEntreprise + "'");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
     public static Neurohub neurohub = new Neurohub();
 }

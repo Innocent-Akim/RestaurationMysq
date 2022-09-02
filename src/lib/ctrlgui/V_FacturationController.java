@@ -36,6 +36,7 @@ public class V_FacturationController implements Initializable {
     @FXML
     private JFXListView<?> ListFacture;
     public static JFXListView<?> ListProduitView;
+    public static JFXListView<?> ListFactureView;
     @FXML
     private Label namero;
     public static Label nameroLabel;
@@ -48,6 +49,7 @@ public class V_FacturationController implements Initializable {
         // TODO
         nameroLabel = namero;
         ListProduitView = ListProduit;
+        ListFactureView = ListFacture;
         initLoad();
 
     }
@@ -56,7 +58,6 @@ public class V_FacturationController implements Initializable {
         try {
 
             int index = 0;
-
             Datasource.cleanList(ListClient, ListCagorie, ListProduit, ListFacture);
             ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "'");
             while (rs.next()) {
