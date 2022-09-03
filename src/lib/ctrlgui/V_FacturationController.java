@@ -61,13 +61,8 @@ public class V_FacturationController implements Initializable {
             Datasource.cleanList(ListClient, ListCagorie, ListProduit, ListFacture);
             ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "'");
             while (rs.next()) {
-                index++;
-                if (index < 10) {
-                    V_loadTableController.idString = "0" + String.valueOf(index);
-                } else {
-                    V_loadTableController.idString = String.valueOf(index);
-                }
 
+                V_loadTableController.idString = Integer.valueOf(rs.getString("code")) < 10 ? "0" + rs.getString("code") : rs.getString("code");
                 V_loadTableController.nameClientString = rs.getString("nom").trim().toUpperCase();
                 ListClient.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadTable.fxml")));
             }
