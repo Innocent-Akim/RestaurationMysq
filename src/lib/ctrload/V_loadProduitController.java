@@ -65,8 +65,7 @@ public class V_loadProduitController implements Initializable {
         categorie.setText(categorieString);
         etat.setText(etatString);
         id.setText(idString);
-
-        btn_add.setOnMouseClicked((action) -> {
+        cardProduit.setOnMouseClicked((action) -> {
             int qte = 1;
             String codeProduit = Datasource.getValue("SELECT code FROM produits WHERE refEntreprise='" + Datasource.refEntreprise + "' AND Designation='" + designation.getText().trim() + "'");
             String qteD = Datasource.getValue("SELECT qte FROM vs_facture WHERE refEntreprise='" + Datasource.refEntreprise + "' AND codeProduit='" + codeProduit.trim() + "' AND  codeFacture='" + V_FacturationController.nameroLabel.getText().trim() + "'");
@@ -75,7 +74,6 @@ public class V_loadProduitController implements Initializable {
                 V_FacturationController.nameroLabel.setText(Neurohub.neurohub.createFacture("ORDINAIRE"));
                 Datasource.execute("INSERT INTO detailfacture SET qte=?, pu=?, codeProduit=?, codeFacture=?", String.valueOf(qte), pu.getText(), codeProduit.trim(), V_FacturationController.nameroLabel.getText().trim());
             } else {
-                System.out.println("=======>" + exist);
                 if (exist == null) {
                     Datasource.execute("INSERT INTO detailfacture SET qte=?, pu=?, codeProduit=?, codeFacture=?", String.valueOf(qte), pu.getText(), codeProduit.trim(), V_FacturationController.nameroLabel.getText().trim());
                 } else {
@@ -84,6 +82,7 @@ public class V_loadProduitController implements Initializable {
             }
             iniFacture();
         });
+
         btn_close.setOnMouseClicked((action) -> {
             int qte = 1;
             String codeProduit = Datasource.getValue("SELECT code FROM produits WHERE refEntreprise='" + Datasource.refEntreprise + "' AND Designation='" + designation.getText().trim() + "'");

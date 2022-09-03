@@ -33,18 +33,6 @@
             <Cursor fx:constant="DEFAULT" />
          </cursor>
       </AnchorPane>
-      <AnchorPane fx:id="btn_add" layoutX="196.0" layoutY="73.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #3D1909; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="3.0">
-         <children>
-            <FontAwesomeIconView fx:id="btl_modifier" fill="WHITE" glyphName="EDIT" layoutX="5.0" layoutY="14.0" size="15">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </FontAwesomeIconView>
-         </children>
-         <cursor>
-            <Cursor fx:constant="HAND" />
-         </cursor>
-      </AnchorPane>
       <AnchorPane fx:id="btn_close" layoutX="196.0" layoutY="50.0" prefHeight="17.0" prefWidth="24.0" style="-fx-background-color: #DC511D; -fx-background-radius: 0.2em;" AnchorPane.rightAnchor="3.0">
          <children>
             <FontAwesomeIconView fx:id="btn_annProduit" fill="WHITE" glyphName="TIMES" layoutX="6.0" layoutY="14.0" onMouseClicked="#retireProduitFac" size="15">
@@ -58,4 +46,7 @@
          </cursor>
       </AnchorPane>
    </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
 </AnchorPane>
