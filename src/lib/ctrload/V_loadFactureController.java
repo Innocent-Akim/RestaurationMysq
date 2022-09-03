@@ -5,12 +5,15 @@
  */
 package lib.ctrload;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import lib.app.App;
+import org.controlsfx.control.PopOver;
 
 /**
  * FXML Controller class
@@ -42,7 +45,12 @@ public class V_loadFactureController implements Initializable {
         montant.setText(montantString.trim());
         client.setText(clientString.trim());
         cardFacture.setOnMouseClicked((action) -> {
-
+            try {
+                App.popOverMenu(cardFacture, getClass().getResource("/lib/uix/v_printFacture.fxml"),
+                        PopOver.ArrowLocation.TOP_CENTER);
+            } catch (IOException ex) {
+                System.out.print(ex.getMessage());
+            }
         });
     }
 
