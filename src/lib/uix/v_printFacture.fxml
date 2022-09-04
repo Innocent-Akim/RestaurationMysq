@@ -9,7 +9,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="331.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_printFactureController">
+<AnchorPane id="AnchorPane" prefHeight="467.0" prefWidth="370.0" style="-fx-background-color: white;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_printFactureController">
    <children>
       <JFXListView fx:id="printFacture" focusTraversable="false" layoutX="-3.0" layoutY="83.0" prefHeight="384.0" prefWidth="331.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="3.0" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="83.0" />
       <JFXButton fx:id="btn_print" buttonType="RAISED" layoutX="139.0" layoutY="12.0" prefHeight="53.0" prefWidth="183.0" style="-fx-background-color: #f59e0b;" text="Imprimer" textFill="WHITE" AnchorPane.rightAnchor="9.0" AnchorPane.topAnchor="12.0">

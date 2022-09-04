@@ -29,6 +29,7 @@ public class V_printFactureController implements Initializable {
     private JFXButton btn_print;
     @FXML
     private JFXButton btn_delete;
+    public static JFXListView<?> printFactureView;
 
     /**
      * Initializes the controller class.
@@ -36,6 +37,7 @@ public class V_printFactureController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        printFactureView = printFacture;
         init();
     }
 
