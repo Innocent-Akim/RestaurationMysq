@@ -56,7 +56,6 @@ public class V_FacturationController implements Initializable {
 
     void initLoad() {
         try {
-
             int index = 0;
             Datasource.cleanList(ListClient, ListCagorie, ListProduit, ListFacture);
             ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "'");

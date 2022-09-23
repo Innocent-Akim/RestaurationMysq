@@ -7,12 +7,16 @@ package lib.ctrload;
 
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXCheckBox;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import lib.app.App;
+import lib.ctrlgui.UtilisateurController;
+import org.controlsfx.control.PopOver;
 
 /**
  * FXML Controller class
@@ -64,6 +68,15 @@ public class LoadPersonneController implements Initializable {
             });
             card.setOnMouseExited((action) -> {
                 activeUser.setVisible(false);
+            });
+            card.setOnMouseClicked((action) -> {
+                try {
+                    UtilisateurController.nomString = nom.getText();
+                    App.popOverMenu(card, getClass().getResource("/lib/gui/utilisateur.fxml"),
+                            PopOver.ArrowLocation.TOP_CENTER);
+                } catch (IOException ex) {
+                    System.out.print(ex.getMessage());
+                }
             });
         }
 

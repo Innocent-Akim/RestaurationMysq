@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="1209.0" style="-fx-background-color: fff;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrlgui.MenuController">
+<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="1209.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.MenuController">
    <children>
       <ImageView fitHeight="718.0" fitWidth="951.0" layoutX="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="107.0">
          <image>
@@ -31,7 +30,7 @@
                   <FontAwesomeIconView glyphName="SHOPPING_BASKET" size="30" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btn_rapport" buttonType="RAISED" prefHeight="60.0" prefWidth="208.0" style="-fx-background-color: fff; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #f59e0b; -fx-border-width: 0.25px;" text="Rapport">
+            <JFXButton fx:id="btn_settings" buttonType="RAISED" prefHeight="60.0" prefWidth="208.0" style="-fx-background-color: fff; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #f59e0b; -fx-border-width: 0.25px;" text="Tableau bord">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -39,18 +38,7 @@
                   <Font name="Century Gothic" size="15.0" />
                </font>
                <graphic>
-                  <FontAwesomeIconView glyphName="FOLDER_OPEN_ALT" size="30" />
-               </graphic>
-            </JFXButton>
-            <JFXButton fx:id="btn_settings" buttonType="RAISED" prefHeight="60.0" prefWidth="208.0" style="-fx-background-color: fff; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #f59e0b; -fx-border-width: 0.25px;" text="Parametrer">
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-               <font>
-                  <Font name="Century Gothic" size="15.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIconView glyphName="WRENCH" size="30" />
+                  <FontAwesomeIconView glyphName="SHOPPING_CART" size="30" />
                </graphic>
             </JFXButton>
          </children>

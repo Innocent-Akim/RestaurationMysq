@@ -12,6 +12,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import static lib.Main.Main.stage;
 import lib.Main.View;
+import lib.app.Files;
 
 /**
  * FXML Controller class
@@ -23,8 +24,6 @@ public class MenuController implements Initializable {
     @FXML
     private JFXButton btn_facturation;
     @FXML
-    private JFXButton btn_rapport;
-    @FXML
     private JFXButton btn_settings;
 
     /**
@@ -34,12 +33,16 @@ public class MenuController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         initEvent();
+        Files.CreadFolder(null);
     }
 
     void initEvent() {
         btn_facturation.setOnAction((action) -> {
             stage.setContent(View.instance().get(View.V_FACTURE));
 
+        });
+        btn_settings.setOnAction((action) -> {
+            stage.setContent(View.instance().get(View.PRINCIPARE));
         });
     }
 }

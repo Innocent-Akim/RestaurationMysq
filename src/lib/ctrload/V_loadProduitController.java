@@ -81,6 +81,8 @@ public class V_loadProduitController implements Initializable {
                 }
             }
             iniFacture();
+            initAmount(V_FacturationController.nameroLabel.getText().trim(), Float.valueOf(pu.getText()));
+
         });
 
         btn_close.setOnMouseClicked((action) -> {
@@ -88,7 +90,6 @@ public class V_loadProduitController implements Initializable {
             String codeProduit = Datasource.getValue("SELECT code FROM produits WHERE refEntreprise='" + Datasource.refEntreprise + "' AND Designation='" + designation.getText().trim() + "'");
             String qteD = Datasource.getValue("SELECT qte FROM vs_facture WHERE refEntreprise='" + Datasource.refEntreprise + "' AND codeProduit='" + codeProduit.trim() + "' AND  codeFacture='" + V_FacturationController.nameroLabel.getText().trim() + "'");
             String exist = Datasource.getValue("SELECT id FROM vs_facture WHERE refEntreprise='" + Datasource.refEntreprise + "' AND codeProduit='" + codeProduit.trim() + "' AND codeFacture='" + V_FacturationController.nameroLabel.getText() + "'");
-            System.out.println("=======>" + exist);
             if (exist != null && Integer.valueOf(qteD) > 1) {
                 Datasource.execute("UPDATE  detailfacture SET qte=? WHERE code=?", String.valueOf((Integer.valueOf(qteD) - qte)), exist);
             } else {
@@ -120,4 +121,12 @@ public class V_loadProduitController implements Initializable {
     private void retireProduitFac(MouseEvent event) {
     }
 
+    boolean initAmount(String idFacture, float montant) {
+        try {
+         return   Datasource.execute("UPDATE entetefacture SET montant=montant+? WHERE code=?", String.valueOf(montant), idFacture);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        return false;
+    }
 }

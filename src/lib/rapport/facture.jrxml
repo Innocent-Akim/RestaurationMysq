@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="226" pageHeight="1224" columnWidth="186" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="8260879a-4af3-4e1e-b7c7-2e09defb380e">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="img" class="java.lang.String"/>
+	<queryString language="SQL">
+		<![CDATA[select * from vs_facture]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pu" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qte" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="montant" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeFacture" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="refEntreprise" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateFacture" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="client" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="agent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeProduit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeClient" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="montant_1" class="java.lang.Float" resetType="Group" resetGroup="codeFacture" calculation="Sum">
+		<variableExpression><![CDATA[$F{montant}]]></variableExpression>
+	</variable>
+	<group name="codeFacture">
+		<groupExpression><![CDATA[$F{codeFacture}]]></groupExpression>
+		<groupHeader>
+			<band height="90">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="59" width="129" height="20" forecolor="#000000" uuid="d64788a8-4e9e-49f0-8048-2b323ad11454"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["FACTURE N° "+$F{codeFacture}
+]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="79" width="11" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="8a8e235d-235a-445c-a628-d2c9dff0515c"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["N°"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="11" y="79" width="98" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="78a5925a-6a88-4b2e-94b9-c09957813ab7"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DESIGNATION"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="109" y="79" width="30" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="826f694b-ee21-4cc7-9992-f986eb0f1567"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["PU"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="139" y="79" width="16" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="508377c3-4972-46b0-b622-05b8dc8eafa9"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["QTE"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="155" y="79" width="31" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="9ee83b58-cf81-4f16-8f8c-1bc403370959"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+						<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="39" width="186" height="20" forecolor="#000000" uuid="4317179d-fe34-4331-ae06-1b0ce953e262"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CLIENT: "+$F{client}+" ID-0"+$F{codeClient}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="129" y="59" width="57" height="20" forecolor="#666666" uuid="0dc8c9c6-8724-4026-9b9f-b1f113255a9a"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Calibri" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dateFacture}.toLocaleString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="35" height="27" forecolor="#FF9900" uuid="9b3e4b4f-87b5-451a-86e8-41943f42c495"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="16" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="19" width="139" height="11" forecolor="#FF3300" uuid="38449d4d-7565-4f57-b083-460af2ed682d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="8" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PÂTISSERIE & RESTAURATION]]></text>
+				</staticText>
+				<image scaleImage="RealSize">
+					<reportElement x="155" y="7" width="31" height="30" uuid="f3112198-cb2e-462b-99f9-33b230a39d7a"/>
+					<imageExpression><![CDATA[$P{img}]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="0" y="28" width="139" height="11" forecolor="#999999" uuid="355a52f2-c656-4c3d-8986-96b60c6a17dd"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Téléphone: 243 85 87 26 087]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="57">
+				<textField>
+					<reportElement x="0" y="1" width="186" height="24" uuid="9d0ce4d2-cf96-4552-8200-b2d8beb8c7dd"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="12" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" MONTANT À PAYER "+$F{montant}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="38" width="186" height="19" uuid="337a21da-07da-4132-9594-6108d5303d19"/>
+					<textElement textAlignment="Center">
+						<font fontName="Calibri" size="8" isBold="false" isUnderline="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed" lineSpacingSize="6.0"/>
+					</textElement>
+					<text><![CDATA[Les marchandises vendues ne sont ni reprises ni échangées.]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="0" y="25" width="186" height="13" forecolor="#663300" uuid="4030ddaa-359f-4c3b-9059-6810f47acb40"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="6" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Serveur: "+$F{agent}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="98" height="11" uuid="5d9a3046-1e32-4bf5-b800-f65d67805af0"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="9" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="30" height="11" uuid="d41e4ebd-1c53-4c62-a411-c9b6e268ae57"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{pu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="16" height="11" uuid="26a88317-116a-4eb4-871a-a4e66d038e2a"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{qte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="31" height="11" uuid="dbf2d700-966e-4ae3-b3cb-4cefc6766a5a"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Tahoma" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{qte}*$F{pu}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="11" height="11" uuid="b676a878-a948-431d-8e28-71b1043ee3db"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<topPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<leftPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<bottomPen lineWidth="0.25" lineColor="#CCCCCC"/>
+					<rightPen lineWidth="0.25" lineColor="#CCCCCC"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="9"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

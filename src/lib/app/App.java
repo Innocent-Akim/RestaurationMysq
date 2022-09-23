@@ -25,7 +25,6 @@ import org.controlsfx.control.PopOver;
 public class App {
 
     private static App instance;
-
     public static App getInstance() {
         return instance == null ? instance = new App() : instance;
     }

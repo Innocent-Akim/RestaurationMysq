@@ -56,8 +56,6 @@ public class PrincipalController implements Initializable {
     private Text txUserName;
     @FXML
     private Text txtFonctionuser;
-    @FXML
-    private JFXListView<?> listdata;
     public static StackPane screenPane;
 
     /**
@@ -89,7 +87,7 @@ public class PrincipalController implements Initializable {
         
         b_rapport.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
-//            View.instance().setContaint(screen, View.RAPPORT);
+            View.instance().setContaint(screen, View.RAPPORT);
 
         });
         b_parametre.setOnMouseClicked((event) -> {

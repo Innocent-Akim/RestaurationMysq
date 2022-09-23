@@ -44,11 +44,12 @@ public class View {
     public static String ERROR = "Error";
     public static String LANDGINGPAGE = "landingpage";
     public static String PARAMETRES = "Parametres";
-    public static String RAPPORT = "Rapports";
+    public static String RAPPORT = "Rapport";
     public static String PRODUITS = "Produits";
     public static String PERSONNE = "Personnel";
     public static String MENU = "Menu";
     public static String V_FACTURE = "V_Facturation";
+//    public static String RAPPORT = "Rapport";
     private static View instance;
 
     private String getUri(String uri) {

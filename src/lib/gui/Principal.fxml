@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import com.jfoenix.controls.JFXListView?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import de.jensd.fx.glyphs.octicons.OctIconView?>
@@ -23,7 +22,7 @@
          <children>
             <AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="600.0">
                <children>
-                  <StackPane fx:id="screen" layoutX="188.0" prefHeight="655.0" prefWidth="828.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="193.0" AnchorPane.topAnchor="0.0" />
+                  <StackPane fx:id="screen" layoutX="188.0" prefHeight="655.0" prefWidth="1020.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="188.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0" />
                   <AnchorPane fx:id="menu_security" layoutX="-6.0" prefHeight="603.0" prefWidth="187.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <AnchorPane layoutX="10.0" layoutY="161.0" prefHeight="161.0" prefWidth="167.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;">
@@ -135,11 +134,6 @@
                               <Image url="@../img/logo.png" />
                            </image>
                         </ImageView>
-                     </children>
-                  </AnchorPane>
-                  <AnchorPane layoutX="1047.0" layoutY="108.0" prefHeight="655.0" prefWidth="187.0" style="-fx-background-color: #fff;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                     <children>
-                        <JFXListView fx:id="listdata" focusTraversable="false" layoutY="177.0" prefHeight="531.0" prefWidth="197.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                      </children>
                   </AnchorPane>
                </children>
