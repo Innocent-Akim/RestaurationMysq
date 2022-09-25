@@ -12,7 +12,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import static lib.Main.Main.stage;
 import lib.Main.View;
+import lib.app.Datasource;
 import lib.app.Files;
+import lib.app.Vars;
 
 /**
  * FXML Controller class
@@ -34,6 +36,7 @@ public class MenuController implements Initializable {
         // TODO
         initEvent();
         Files.CreadFolder(null);
+        Datasource.refEntreprise = Vars.vars.getRefEntreprise();
     }
 
     void initEvent() {

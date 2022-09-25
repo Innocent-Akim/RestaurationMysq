@@ -11,9 +11,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
-import lib.app.Datasource;
 import lib.app.Neurohub;
-import lib.app.Vars;
 import lib.ctrlgui.V_FacturationController;
 
 /**

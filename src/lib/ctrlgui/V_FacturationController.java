@@ -17,6 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import lib.app.App;
 import lib.app.Datasource;
+import lib.app.Vars;
 import lib.ctrload.V_loadCategorieController;
 import lib.ctrload.V_loadTableController;
 
@@ -40,6 +41,8 @@ public class V_FacturationController implements Initializable {
     @FXML
     private Label namero;
     public static Label nameroLabel;
+    @FXML
+    private Label tauxjour;
 
     /**
      * Initializes the controller class.
@@ -50,6 +53,7 @@ public class V_FacturationController implements Initializable {
         nameroLabel = namero;
         ListProduitView = ListProduit;
         ListFactureView = ListFacture;
+        tauxjour.setText(Datasource.getValue("SELECT taux FROM taux WHERE status=1") + " CDF");
         initLoad();
 
     }
@@ -58,13 +62,13 @@ public class V_FacturationController implements Initializable {
         try {
             int index = 0;
             Datasource.cleanList(ListClient, ListCagorie, ListProduit, ListFacture);
-            ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Datasource.refEntreprise + "'");
+            ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='CLIENTS' AND refEntreprise='" + Vars.vars.getRefEntreprise() + "'");
             while (rs.next()) {
                 V_loadTableController.idString = Integer.valueOf(rs.getString("code")) < 10 ? "0" + rs.getString("code") : rs.getString("code");
                 V_loadTableController.nameClientString = rs.getString("nom").trim().toUpperCase();
                 ListClient.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadTable.fxml")));
             }
-            ResultSet rst = Datasource.getrResultat("SELECT * FROM categorie WHERE refEntreprise='" + Datasource.refEntreprise + "'");
+            ResultSet rst = Datasource.getrResultat("SELECT * FROM categorie WHERE refEntreprise='" + Vars.vars.getRefEntreprise() + "'");
             while (rst.next()) {
                 V_loadCategorieController.nameCategorieString = rst.getString("designation").trim().toUpperCase();
                 V_loadCategorieController.idCodString = rst.getString("code").trim().toUpperCase();

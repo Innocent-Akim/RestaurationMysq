@@ -13,6 +13,7 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.text.Text;
@@ -35,8 +36,11 @@ public class UtilisateurController implements Initializable {
     @FXML
     private Text nom;
     public static String nomString;
+    public static String idUser;
     @FXML
     private JFXListView<?> searchList;
+    @FXML
+    private Label codeUser;
 
     /**
      * Initializes the controller class.
@@ -45,6 +49,7 @@ public class UtilisateurController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         new Acces().dataTache(listUtilisateur);
         nom.setText(nomString);
+        codeUser.setText(idUser);
         searchList.setVisible(false);
         search.setOnKeyReleased((Action) -> {
             try {

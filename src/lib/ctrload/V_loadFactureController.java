@@ -32,7 +32,9 @@ public class V_loadFactureController implements Initializable {
     private Label montant;
     @FXML
     private Label client;
-    public static String idString, numString, montantString, clientString;
+    public static String idString, numString, montantString, clientString,montanDCFString;
+    @FXML
+    private Label montanDCF;
 
     /**
      * Initializes the controller class.
@@ -44,6 +46,7 @@ public class V_loadFactureController implements Initializable {
         numero.setText(numString.trim());
         montant.setText(montantString.trim());
         client.setText(clientString.trim());
+        montanDCF.setText(montanDCFString);
         cardFacture.setOnMouseClicked((action) -> {
             try {
                 App.popOverMenu(cardFacture, getClass().getResource("/lib/uix/v_printFacture.fxml"),

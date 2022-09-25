@@ -13,7 +13,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.V_FacturationController">
    <children>
       <AnchorPane id="AnchorPane" prefHeight="685.0" prefWidth="850.0" style="-fx-background-color: #F7F8FB;">
@@ -89,6 +88,16 @@
                         </Label>
                      </children>
                   </GridPane>
+                  <Label layoutX="351.0" layoutY="14.0" prefHeight="23.0" prefWidth="119.0" text="TAUX DU JOUR" AnchorPane.leftAnchor="351.0">
+                     <font>
+                        <Font name="Tahoma Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="tauxjour" alignment="CENTER" layoutX="470.0" layoutY="6.0" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #DE561E; -fx-background-radius: 5px;" text="2010" textFill="WHITE" AnchorPane.leftAnchor="470.0">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
                </children>
             </AnchorPane>
          </children>

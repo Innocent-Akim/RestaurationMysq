@@ -12,7 +12,8 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
-import lib.ctrload.LoadTachesearchController;
+import lib.app.Vars;
+import lib.ctrload.LoadTacheController;
 import static lib.dbconnect.Dbconnect.cnx;
 
 /**
@@ -39,7 +40,7 @@ public final class Acces {
     }
 
     public Acces(String codeUser) {
-        listeAcces = initData("SELECT fonction FROM Ttaches WHERE  refEntreprise= '" + refEntreprise + "' AND codeUser='" + codeUser + "' AND etat=1");
+        listeAcces = initData("SELECT fonction FROM Ttaches WHERE  refEntreprise= '" + Vars.vars.getRefEntreprise() + "' AND codeUser='" + codeUser + "' AND etat=1");
     }
 
     public static void setAcces(Node element, String fonction) {
@@ -82,8 +83,8 @@ public final class Acces {
         list.getItems().clear();
         initTach().forEach((data) -> {
             try {
-                LoadTachesearchController.public_String = data;
-                list.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/loadTachesearch.fxml")));
+                LoadTacheController.taskpublc = data;
+                list.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/loadTache.fxml")));
             } catch (IOException e) {
                 e.printStackTrace();
             }

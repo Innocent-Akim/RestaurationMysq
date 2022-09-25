@@ -25,6 +25,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import lib.app.App;
 import lib.app.Datasource;
+import lib.app.Vars;
 import lib.ctrload.LoadProduitController;
 import org.controlsfx.control.PopOver;
 
@@ -68,7 +69,7 @@ public class ProduitsController implements Initializable {
     void getLoaded() {
         try {
             Datasource.cleanList(itemProduit);
-            ResultSet rs = Datasource.getrResultat("SELECT * FROM vs_produits WHERE refEntreprise='" + Datasource.refEntreprise + "'");
+            ResultSet rs = Datasource.getrResultat("SELECT * FROM vs_produits WHERE refEntreprise='" + Vars.vars.getRefEntreprise() + "'");
             while (rs.next()) {
                 LoadProduitController.designationString = rs.getString("designation");
                 LoadProduitController.punitaireString = rs.getString("pu");

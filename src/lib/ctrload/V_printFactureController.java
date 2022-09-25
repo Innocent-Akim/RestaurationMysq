@@ -19,6 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import lib.app.Datasource;
+import lib.app.Vars;
 import lib.app.manifest;
 import lib.ctrlgui.V_FacturationController;
 import lib.imprimer.Imprimer;
@@ -54,7 +55,7 @@ public class V_printFactureController implements Initializable {
         try {
             int compteur = 0;
             Datasource.cleanList(printFacture);
-            ResultSet rs = Datasource.getrResultat("SELECT * FROM vs_facture WHERE refEntreprise='" + Datasource.refEntreprise + "' AND codeFacture='" + V_FacturationController.nameroLabel.getText() + "'");
+            ResultSet rs = Datasource.getrResultat("SELECT * FROM vs_facture WHERE refEntreprise='" + Vars.vars.getRefEntreprise() + "' AND codeFacture='" + V_FacturationController.nameroLabel.getText() + "'");
             while (rs.next()) {
                 compteur++;
                 V_loadPrintController.codeString = rs.getString("id");
@@ -71,7 +72,9 @@ public class V_printFactureController implements Initializable {
             try {
                 Map<String, String> map = new HashMap();
                 map.put("img", manifest.RAPPORT_LOGO);
-                new Imprimer().isPrint("SELECT * FROM `vs_facture` where codeFacture='" + V_FacturationController.nameroLabel.getText() + "'", "facture", map, Boolean.TRUE);
+                for (int x = 0; x < 2; x++) {
+                    new Imprimer().isPrint("SELECT * FROM `vs_facture` where codeFacture='" + V_FacturationController.nameroLabel.getText() + "'", "facture", map, Boolean.TRUE);
+                }
             } catch (Exception e) {
             }
         });

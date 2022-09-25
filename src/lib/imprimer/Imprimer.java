@@ -83,8 +83,8 @@ public class Imprimer {
                 jaspertDisign.setQuery(gn);
                 JasperReport Fichier = JasperCompileManager.compileReport(jaspertDisign);
                 a = JasperFillManager.fillReport(Fichier, parametres, cnx());
-                JasperPrintManager.printReport(a, Ouvrir_fenetre);
-                JasperViewer view = new JasperViewer(a, false);
+                JasperPrintManager.printReport(a, true);
+                JasperViewer view = new JasperViewer(a, true);
                 view.setTitle("REA-PATISSERIE");
                 view.setResizable(true);
                 InputStream stram = getClass().getResourceAsStream(manifest.RAPPORT_LOGO);

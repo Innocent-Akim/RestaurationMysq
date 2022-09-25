@@ -48,7 +48,7 @@ public class LoadPersonneController implements Initializable {
     @FXML
     private Label iduser;
 
-    public static String nomString, telephoneString, adresseString, prefixNameString, codeIdeString, lbl_titleString;
+    public static String nomString, telephoneString, adresseString, prefixNameString, codeIdeString, lbl_titleString, iduserString;
 
     /**
      * Initializes the controller class.
@@ -61,6 +61,7 @@ public class LoadPersonneController implements Initializable {
         codeIde.setText(codeIdeString.trim());
         prefixName.setText(nomString.substring(0, 1));
         activeUser.setVisible(false);
+        iduser.setText(iduserString);
         lbl_title.setText(lbl_titleString.trim());
         if (lbl_title.getText().equals("AGENTS")) {
             card.setOnMouseEntered((action) -> {
@@ -72,6 +73,7 @@ public class LoadPersonneController implements Initializable {
             card.setOnMouseClicked((action) -> {
                 try {
                     UtilisateurController.nomString = nom.getText();
+                    UtilisateurController.idUser = iduser.getText();
                     App.popOverMenu(card, getClass().getResource("/lib/gui/utilisateur.fxml"),
                             PopOver.ArrowLocation.TOP_CENTER);
                 } catch (IOException ex) {

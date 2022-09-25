@@ -123,7 +123,7 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <JFXButton fx:id="btaction" buttonType="RAISED" layoutX="9.0" layoutY="172.0" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #f6ad2a;" styleClass="cursor" text="Enregistrer" textFill="WHITE">
+            <JFXButton fx:id="btaction" buttonType="RAISED" layoutX="9.0" layoutY="298.0" prefHeight="30.0" prefWidth="245.0" style="-fx-background-color: #f6ad2a;" styleClass="cursor" text="Enregistrer" textFill="WHITE">
                <font>
                   <Font name="Century Gothic Bold" size="14.0" />
                </font>
@@ -132,6 +132,7 @@
                </cursor>
             </JFXButton>
             <Label fx:id="idUpdate" layoutX="14.0" layoutY="335.0" prefHeight="17.0" prefWidth="119.0" text="Label" textFill="#ffffff00" />
+            <Label fx:id="label" layoutX="10.0" layoutY="164.0" text="Utilisateur" />
          </children>
          <effect>
             <DropShadow color="#c6c6c6" />
@@ -150,5 +151,53 @@
             </Text>
          </children>
       </AnchorPane>
+      <VBox fx:id="cad" layoutX="24.0" layoutY="247.0" spacing="10.0">
+         <children>
+            <VBox fx:id="user">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nom d'utilisateur" wrappingWidth="157.00002485513687">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane prefHeight="28.0" prefWidth="245.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
+                     <children>
+                        <TextField fx:id="username" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le nom d'utilisateur" style="-fx-background-color: #FFF;">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <MaterialDesignIconView fill="#f6ad2a" glyphName="PERSON" layoutX="6.0" layoutY="19.0" size="15" text="" />
+                     </children>
+                     <effect>
+                        <DropShadow color="WHITE" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </VBox>
+            <VBox fx:id="pass">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mot de passe" wrappingWidth="157.00002485513687">
+                     <font>
+                        <Font name="Century Gothic" size="12.0" />
+                     </font>
+                  </Text>
+                  <AnchorPane prefHeight="28.0" prefWidth="245.0" style="-fx-background-color: #fff; -fx-border-color: #BAC3E2; -fx-border-width: 0.25;">
+                     <children>
+                        <TextField fx:id="password" layoutX="17.0" layoutY="1.0" prefHeight="26.0" prefWidth="227.0" promptText="Entrer le mot de passe" style="-fx-background-color: #FFF;">
+                           <font>
+                              <Font name="Century Gothic" size="12.0" />
+                           </font>
+                        </TextField>
+                        <MaterialDesignIconView fill="#f6ad2a" glyphName="CLOCK" layoutX="6.0" layoutY="19.0" size="15" text="" />
+                     </children>
+                     <effect>
+                        <DropShadow color="WHITE" />
+                     </effect>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
