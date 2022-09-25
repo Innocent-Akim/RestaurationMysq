@@ -16,7 +16,7 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label fx:id="numero" alignment="CENTER" layoutY="20.0" prefHeight="17.0" prefWidth="149.0" text="N°-10001" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+      <Label fx:id="numero" alignment="CENTER" layoutY="16.0" prefHeight="17.0" prefWidth="149.0" text="N°-10001" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
          <font>
             <Font name="Century Gothic Bold" size="15.0" />
          </font>

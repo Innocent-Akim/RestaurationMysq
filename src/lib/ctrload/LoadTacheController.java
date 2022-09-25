@@ -37,8 +37,8 @@ public class LoadTacheController implements Initializable {
         taske.setText(taskpublc);
         taskpublic = taske;
         chckbnt.setOnAction((e) -> {
-            Datasource.getValue("SELECT * FROM tache WHERE codeUser is null and ");
-            Datasource.execute("UPDATE `tache` SET `status`=? WHERE designation=? AND codeUser=?",taske.getText());
+         Datasource.execute("INSERT INTO `tache` SET `designation`=?, `codeUser`=?, `status`=?",taske.getText());
+//            Datasource.execute("UPDATE `tache` SET `status`=? WHERE designation=? AND codeUser=?",taske.getText());
 
         });
     }

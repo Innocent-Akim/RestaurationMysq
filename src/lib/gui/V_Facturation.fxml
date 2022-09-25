@@ -2,7 +2,7 @@
 
 <?import com.jfoenix.controls.JFXListView?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
-<?import de.jensd.fx.glyphs.icons525.Icons525View?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -11,7 +11,6 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
 <StackPane xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.V_FacturationController">
    <children>
@@ -41,22 +40,53 @@
                         <FontAwesomeIconView fill="WHITE" glyphName="STEAM_SQUARE" size="22" />
                      </graphic>
                   </Label>
-                  <AnchorPane layoutX="50.0" prefHeight="49.0" prefWidth="274.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="50.0">
+                  <AnchorPane layoutX="50.0" prefHeight="49.0" prefWidth="831.0" style="-fx-background-color: Transparent;" AnchorPane.leftAnchor="50.0" AnchorPane.rightAnchor="0.0">
                      <effect>
                         <DropShadow blurType="GAUSSIAN" color="#c6c6c6" height="6.0" offsetX="0.5" offsetY="0.5" radius="2.5" width="6.0" />
                      </effect>
                      <children>
-                        <Text layoutX="11.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACTURATION">
+                        <GridPane alignment="CENTER_RIGHT" layoutY="6.0" prefHeight="30.0" prefWidth="205.0" AnchorPane.rightAnchor="626.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label alignment="TOP_LEFT" prefHeight="23.0" prefWidth="108.0" text="FACTURE ID-">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="namero" alignment="TOP_LEFT" contentDisplay="RIGHT" prefHeight="30.0" prefWidth="88.0" text="00" textFill="#f59e0b" GridPane.columnIndex="1">
+                                 <font>
+                                    <Font name="Century Gothic Bold" size="25.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </GridPane>
+                        <Label layoutX="193.0" layoutY="11.0" prefHeight="23.0" prefWidth="119.0" text="TAUX DU JOUR" AnchorPane.leftAnchor="193.0">
                            <font>
-                              <Font name="Century Gothic Bold" size="13.0" />
+                              <Font name="Tahoma Bold" size="15.0" />
                            </font>
-                        </Text>
-                        <Icons525View fill="#421f06" glyphName="VINE" layoutX="256.0" layoutY="32.0" size="20" />
-                        <Text fill="#42627d58" layoutX="12.0" layoutY="17.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Opération" wrappingWidth="173.13670974969864">
+                        </Label>
+                        <Label fx:id="tauxjour" alignment="CENTER" layoutX="313.0" layoutY="4.0" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #DE561E; -fx-background-radius: 5px;" text="2010" textFill="WHITE" AnchorPane.leftAnchor="313.0">
                            <font>
-                              <Font name="Gadugi Bold" size="12.0" />
+                              <Font name="Tahoma Bold" size="24.0" />
                            </font>
-                        </Text>
+                        </Label>
+                        <Label fx:id="username" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="592.0" layoutY="11.0" prefHeight="20.0" prefWidth="189.0" text="AKILIMALI CIZUNGU" AnchorPane.rightAnchor="50.0">
+                           <font>
+                              <Font name="Tahoma Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="786.0" layoutY="5.0" prefHeight="47.0" prefWidth="35.0" style="-fx-background-color: #1C9FE3; -fx-background-radius: 25px;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                           <children>
+                              <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" layoutX="15.0" layoutY="27.125" size="20" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
+                           </children>
+                        </AnchorPane>
+                        <Label alignment="TOP_RIGHT" layoutX="634.0" layoutY="26.0" prefHeight="17.0" prefWidth="189.0" text="REA Pâtisserie &amp; Restaurant" textFill="#b9b3b3" AnchorPane.rightAnchor="50.0" />
                      </children>
                   </AnchorPane>
                   <GridPane hgap="4.0" layoutX="746.0" layoutY="10.0" vgap="4.0" AnchorPane.rightAnchor="5.0">
@@ -67,38 +97,10 @@
                         <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
                      </rowConstraints>
                   </GridPane>
-                  <GridPane alignment="CENTER_RIGHT" layoutX="613.0" layoutY="11.0" prefHeight="30.0" prefWidth="234.0" AnchorPane.rightAnchor="3.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                     <children>
-                        <Label alignment="CENTER_RIGHT" prefHeight="23.0" prefWidth="149.0" text="FACTURE ID-">
-                           <font>
-                              <Font name="Century Gothic Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <Label fx:id="namero" alignment="CENTER" prefHeight="30.0" prefWidth="88.0" text="00" textFill="#f59e0b" GridPane.columnIndex="1">
-                           <font>
-                              <Font name="Century Gothic Bold" size="25.0" />
-                           </font>
-                        </Label>
-                     </children>
-                  </GridPane>
-                  <Label layoutX="351.0" layoutY="14.0" prefHeight="23.0" prefWidth="119.0" text="TAUX DU JOUR" AnchorPane.leftAnchor="351.0">
-                     <font>
-                        <Font name="Tahoma Bold" size="15.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="tauxjour" alignment="CENTER" layoutX="470.0" layoutY="6.0" prefHeight="41.0" prefWidth="147.0" style="-fx-background-color: #DE561E; -fx-background-radius: 5px;" text="2010" textFill="WHITE" AnchorPane.leftAnchor="470.0">
-                     <font>
-                        <Font name="Tahoma Bold" size="24.0" />
-                     </font>
-                  </Label>
                </children>
+               <effect>
+                  <DropShadow color="#e36a0e60" />
+               </effect>
             </AnchorPane>
          </children>
       </AnchorPane>

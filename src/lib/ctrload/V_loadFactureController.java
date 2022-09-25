@@ -32,9 +32,10 @@ public class V_loadFactureController implements Initializable {
     private Label montant;
     @FXML
     private Label client;
-    public static String idString, numString, montantString, clientString,montanDCFString;
+    public static String idString, numString, montantString, clientString, montanDCFString;
     @FXML
     private Label montanDCF;
+    public static Label montanDCFLabel;
 
     /**
      * Initializes the controller class.
@@ -42,6 +43,7 @@ public class V_loadFactureController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        montanDCFLabel = montanDCF;
         id.setText(idString.trim());
         numero.setText(numString.trim());
         montant.setText(montantString.trim());

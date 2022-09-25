@@ -27,7 +27,7 @@ import lib.ctrload.V_loadTableController;
  * @author ISDR
  */
 public class V_FacturationController implements Initializable {
-
+    
     @FXML
     private JFXListView<?> ListClient;
     @FXML
@@ -43,6 +43,8 @@ public class V_FacturationController implements Initializable {
     public static Label nameroLabel;
     @FXML
     private Label tauxjour;
+    @FXML
+    private Label username;
 
     /**
      * Initializes the controller class.
@@ -50,14 +52,15 @@ public class V_FacturationController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        username.setText(Vars.vars.getNom().toUpperCase());
         nameroLabel = namero;
         ListProduitView = ListProduit;
         ListFactureView = ListFacture;
         tauxjour.setText(Datasource.getValue("SELECT taux FROM taux WHERE status=1") + " CDF");
         initLoad();
-
+        
     }
-
+    
     void initLoad() {
         try {
             int index = 0;

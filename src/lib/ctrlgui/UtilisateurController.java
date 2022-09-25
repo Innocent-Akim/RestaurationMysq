@@ -41,6 +41,7 @@ public class UtilisateurController implements Initializable {
     private JFXListView<?> searchList;
     @FXML
     private Label codeUser;
+    public static Label codeUserLabel;
 
     /**
      * Initializes the controller class.
@@ -51,6 +52,7 @@ public class UtilisateurController implements Initializable {
         nom.setText(nomString);
         codeUser.setText(idUser);
         searchList.setVisible(false);
+        codeUserLabel=codeUser;
         search.setOnKeyReleased((Action) -> {
             try {
                 searchList.getItems().clear();

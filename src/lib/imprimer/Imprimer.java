@@ -11,6 +11,7 @@ import com.jfoenix.controls.JFXDialog;
 import com.jfoenix.controls.JFXDialogLayout;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -83,8 +84,8 @@ public class Imprimer {
                 jaspertDisign.setQuery(gn);
                 JasperReport Fichier = JasperCompileManager.compileReport(jaspertDisign);
                 a = JasperFillManager.fillReport(Fichier, parametres, cnx());
-                JasperPrintManager.printReport(a, true);
-                JasperViewer view = new JasperViewer(a, true);
+                JasperPrintManager.printReport(a, false);
+                JasperViewer view = new JasperViewer(a, false);
                 view.setTitle("REA-PATISSERIE");
                 view.setResizable(true);
                 InputStream stram = getClass().getResourceAsStream(manifest.RAPPORT_LOGO);
@@ -101,6 +102,24 @@ public class Imprimer {
             Alerte.alerte.setAlert("Aucune donnée n'as été trouvée !" + ex, Alert.AlertType.ERROR);
         } catch (IOException ex) {
             Files.error("Erreur d'impression : >>" + requete + " --> " + ex.getMessage());
+        }
+        return false;
+    }
+
+    public static boolean facture(String requete, Map parametres, String cheminJasper) {
+        JasperPrint a = null;
+        try {
+            JasperDesign g = JRXmlLoader.load(Files.CreadFolder(null) + cheminJasper + ".jrxml");
+            JRDesignQuery gn = new JRDesignQuery();
+            gn.setText(requete);
+            g.setQuery(gn);
+            JasperReport Fichier = JasperCompileManager.compileReport(g);
+            a = JasperFillManager.fillReport(Fichier, parametres, cnx());
+            JasperPrintManager.printReport(a, false);
+            return true;
+        } catch (JRException ex) {
+            Files.error("Erreur d'impression : >>" + requete + " --> " + ex.getMessage());
+            Alerte.alerte.setAlert("Aucune donnée n'as été trouvée !" + ex, Alert.AlertType.ERROR);
         }
         return false;
     }

@@ -50,6 +50,7 @@ public class V_printFactureController implements Initializable {
         printFactureView = printFacture;
         init();
     }
+    
 
     void init() {
         try {
@@ -72,9 +73,12 @@ public class V_printFactureController implements Initializable {
             try {
                 Map<String, String> map = new HashMap();
                 map.put("img", manifest.RAPPORT_LOGO);
+                map.put("montantcdf", V_loadFactureController.montanDCFLabel.getText());
                 for (int x = 0; x < 2; x++) {
-                    new Imprimer().isPrint("SELECT * FROM `vs_facture` where codeFacture='" + V_FacturationController.nameroLabel.getText() + "'", "facture", map, Boolean.TRUE);
+                   Imprimer.  facture("SELECT * FROM `vs_facture` where codeFacture='" + V_FacturationController.nameroLabel.getText() + "'",map, "facture");
                 }
+                Datasource.cleanList(V_FacturationController.ListFactureView);
+                V_FacturationController.nameroLabel.setText("00");
             } catch (Exception e) {
             }
         });
@@ -100,12 +104,34 @@ public class V_printFactureController implements Initializable {
                         init();
                         V_FacturationController.nameroLabel.setText("00");
                     }
+                    iniFacture();
                 }
 
-            } catch (Exception e) {
+            } catch (SQLException e) {
                 e.printStackTrace();
             }
         });
+    }
+
+    void iniFacture() {
+        try {
+            String montantCDF = Datasource.getValue("SELECT taux FROM taux WHERE status=1");
+            Datasource.cleanList(V_FacturationController.ListFactureView);
+            System.out.println(V_FacturationController.nameroLabel.getText());
+            ResultSet rs = Datasource.getrResultat("SELECT sum(qte*pu) montant,codeFacture,codeClient,client,devise FROM vs_facture WHERE codeFacture='" + V_FacturationController.nameroLabel.getText() + "' AND refEntreprise='" + Vars.vars.getRefEntreprise() + "'"
+                    + "  GROUP BY codeFacture,codeClient,client,devise");
+            while (rs.next()) {
+                V_loadFactureController.montantString = rs.getString("montant") + " " + rs.getString("devise");
+                V_loadFactureController.idString = Integer.valueOf(rs.getString("codeClient")) < 10 ? "0" + rs.getString("codeClient") : rs.getString("codeClient");
+                V_loadFactureController.numString = rs.getString("codeFacture");
+                V_loadFactureController.clientString = rs.getString("client");
+                V_loadFactureController.montanDCFString = String.valueOf(Float.valueOf(montantCDF) * rs.getFloat("montant")) + " CDF";
+                V_FacturationController.ListFactureView.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadFacture.fxml")));
+            }
+        } catch (IOException | SQLException e) {
+            e.printStackTrace();
+        }
+
     }
 
 }

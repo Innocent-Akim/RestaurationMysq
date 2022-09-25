@@ -43,6 +43,7 @@ public class V_loadProduitController implements Initializable {
     V_loadTableController loadTable;
     @FXML
     private Label devise;
+    public static Label puLabel;
 
     /**
      * Initializes the controller class.
@@ -50,6 +51,7 @@ public class V_loadProduitController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        puLabel = pu;
         loadTable = new V_loadTableController();
         designation.setText(designationString);
         pu.setText(puString);
@@ -105,7 +107,7 @@ public class V_loadProduitController implements Initializable {
                 V_loadFactureController.idString = Integer.valueOf(rs.getString("codeClient")) < 10 ? "0" + rs.getString("codeClient") : rs.getString("codeClient");
                 V_loadFactureController.numString = rs.getString("codeFacture");
                 V_loadFactureController.clientString = rs.getString("client");
-                V_loadFactureController.montanDCFString = String.valueOf(Float.valueOf(montantCDF) * rs.getFloat("montant"))+" CDF";
+                V_loadFactureController.montanDCFString = String.valueOf(Float.valueOf(montantCDF) * rs.getFloat("montant")) + " CDF";
                 V_FacturationController.ListFactureView.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadFacture.fxml")));
             }
         } catch (IOException | SQLException e) {
