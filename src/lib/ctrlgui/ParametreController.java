@@ -31,15 +31,12 @@ public class ParametreController implements Initializable {
     private AnchorPane id_menu;
     @FXML
     private Label personnel;
-    @FXML
-    private Label fonction;
-    @FXML
-    private Label configuration;
-    @FXML
-    private Label utilisateur;
+
     @FXML
     private Label indice;
     public static StackPane contains;
+    @FXML
+    private Label taux;
 
     /**
      * Initializes the controller class.
@@ -54,28 +51,18 @@ public class ParametreController implements Initializable {
 
     void initEvent() {
         View.instance().setContaint(screen, View.PERSONNE);
-        App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
+        App.getInstance().IsSeleted(personnel, taux);
         personnel.setOnMouseClicked((Action) -> {
             indice.setLayoutY(90);
-            App.getInstance().IsSeleted(personnel, utilisateur, fonction, configuration);
+            App.getInstance().IsSeleted(personnel, taux);
             View.instance().setContaint(screen, View.PERSONNE);
         });
-        utilisateur.setOnMouseClicked((Action) -> {
+        taux.setOnMouseClicked((Action) -> {
             indice.setLayoutY(130);
-            App.getInstance().IsSeleted(utilisateur, personnel, fonction, configuration);
+            View.instance().setContaint(screen, View.TAUX);
+            App.getInstance().IsSeleted(taux, personnel);
         });
-        fonction.setOnMouseClicked((Action) -> {
 
-            indice.setLayoutY(170);
-            App.getInstance().IsSeleted(fonction, personnel, utilisateur, configuration);
-
-        });
-        configuration.setOnMouseClicked((Action) -> {
-            indice.setLayoutY(210);
-
-            App.getInstance().IsSeleted(configuration, personnel, utilisateur, fonction);
-
-        });
     }
 
     public void ecran_remove(StackPane pane, String ecran) {
@@ -84,7 +71,7 @@ public class ParametreController implements Initializable {
             pane.getChildren().removeAll();
             pane.getChildren().setAll(root);
         } catch (IOException ex) {
-//            Cls_alerte.alerteErreur("error", ex.getMessage());
+            ex.printStackTrace();
         }
     }
 

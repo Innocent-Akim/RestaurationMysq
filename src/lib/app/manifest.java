@@ -12,7 +12,7 @@ package lib.app;
 public class manifest {
 
     public static String APP_ICON = "/lib/img/logo.png";
-    public static String APP_DEFAULT_IMG = "/lob/img/default_user.png";
-    public static String APP_TITRE = "EMs Auto service";
-    public static String RAPPORT_LOGO = Files.CreadFolder(null) + "logo_2.png";
+//    public static String APP_DEFAULT_IMG = "/lob/img/default_user.png";
+    public static String APP_TITRE = "REA";
+    public static String RAPPORT_LOGO = Files.CreadFolder(null) + "logo.png";
 }

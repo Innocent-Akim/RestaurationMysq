@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="59.0" prefWidth="179.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.V_loadTauxController">
+   <children>
+      <JFXCheckBox fx:id="index" checkedColor="#f89e0b" layoutY="7.0" prefHeight="46.0" prefWidth="48.0" text="." textFill="#ffffff00" AnchorPane.leftAnchor="0.0" />
+      <Label fx:id="taux" layoutX="36.0" layoutY="11.0" prefHeight="39.0" prefWidth="72.0" text="2025 ">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+      <Label fx:id="devise" layoutX="126.0" layoutY="14.0" text="CDF" textFill="#ffb200" AnchorPane.rightAnchor="4.0">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <Label fx:id="status" layoutX="98.0" layoutY="6.0" text="Label" textFill="TRANSPARENT" />
+   </children>
+</AnchorPane>

@@ -46,6 +46,7 @@ public class V_loadCategorieController implements Initializable {
                     V_loadProduitController.designationString = rs.getString("designation");
                     V_loadProduitController.categorieString = rs.getString("categorie");
                     V_loadProduitController.puString = rs.getString("pu");
+                    V_loadProduitController.deviseString = rs.getString("devise");
                     V_loadProduitController.idString = rs.getString("code");
                     V_loadProduitController.etatString = "Disponible";
                     V_FacturationController.ListProduitView.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/v_loadProduit.fxml")));

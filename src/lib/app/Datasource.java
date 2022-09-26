@@ -18,7 +18,26 @@ import lib.dbconnect.Dbconnect;
  */
 public class Datasource extends Dbconnect {
 
-    public static String refEntreprise = Vars.vars.getRefEntreprise();
+    public static String refEntreprise;
+
+    public Datasource() {
+        refEntreprise = Vars.vars.getRefEntreprise();
+    }
+
+    public static int getCountBy(String rqt) {
+        int x = 0;
+        try {
+            preparedStatement = cnx().prepareStatement(rqt);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                x++;
+            }
+        } catch (SQLException e) {
+            Files.error(rqt + "==>Error " + e.getMessage());
+            System.err.println(e);
+        }
+        return x;
+    }
 
     public static boolean execute(String query, String... param) {
         try {

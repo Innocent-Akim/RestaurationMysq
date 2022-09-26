@@ -19,8 +19,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.input.KeyEvent;
-import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import lib.app.Alerte;
 import lib.app.App;
@@ -55,12 +54,25 @@ public class PersonneController implements Initializable {
     private Label idUpdate;
     @FXML
     private Text etiquette;
+    @FXML
+    private TextField username;
+    @FXML
+    private TextField password;
+    @FXML
+    private Label label;
+    @FXML
+    private VBox cad;
+    @FXML
+    private VBox user;
+    @FXML
+    private VBox pass;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+
         // TODO
         App.getInstance().SelectDataFor(agent, client);
         etiquette.setText("Agents");
@@ -69,11 +81,16 @@ public class PersonneController implements Initializable {
             App.getInstance().SelectDataFor(agent, client);
             etiquette.setText("Agents");
             initData();
+            cad.setVisible(true);
+            label.setVisible(true);
         });
         client.setOnAction((action) -> {
             App.getInstance().SelectDataFor(client, agent);
             etiquette.setText("Clients");
             initData();
+            cad.setVisible(false);
+            label.setVisible(false);
+
         });
         btaction.setOnAction((action) -> {
             if (Neurohub.isFieldsempty(nom, contact, adresse)) {
@@ -81,6 +98,15 @@ public class PersonneController implements Initializable {
             } else {
                 boolean status = Datasource.execute("INSERT INTO personne SET `nom`=?,`contact`=?,`adresse`=?,`type`=?,`refEntreprise`=? ", nom.getText(), contact.getText(), adresse.getText(), etiquette.getText(), Datasource.refEntreprise);
                 if (status) {
+                    if (etiquette.getText().equals("Agents")) {
+                        if (!username.getText().trim().equals("") && !password.getText().trim().equals("")) {
+                            String code = Datasource.getValue("SELECT MAX(code) FROM personne");
+                            boolean res = Datasource.execute("INSERT INTO `users` SET codeUser=?,`username`=?,`password`=md5(?)", code, username.getText(), password.getText());
+                            if (res) {
+                                Neurohub.initFields(username, password);
+                            }
+                        }
+                    }
                     Neurohub.initFields(nom, contact, adresse);
                     initData();
                     Alerte.alerteInformation("Information", Msg.MESSAGE_SAVE);
@@ -93,13 +119,14 @@ public class PersonneController implements Initializable {
     void initData() {
         try {
             Datasource.cleanList(listView);
-            ResultSet rs = Datasource.getrResultat("SELECT * FROM personne WHERE type='" + etiquette.getText().trim() + "' AND refEntreprise='" + Datasource.refEntreprise + "'");
+            ResultSet rs = Datasource.getrResultat("SELECT * FROM vs_login WHERE type='" + etiquette.getText().trim() + "' AND refEntreprise='" + Datasource.refEntreprise + "'");
             while (rs.next()) {
                 LoadPersonneController.nomString = rs.getString("nom");
                 LoadPersonneController.telephoneString = rs.getString("contact");
                 LoadPersonneController.adresseString = rs.getString("adresse");
                 LoadPersonneController.codeIdeString = rs.getString("code");
                 LoadPersonneController.lbl_titleString = rs.getString("type");
+                LoadPersonneController.iduserString=rs.getString("ID");
                 listView.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/loadPersonne.fxml")));
             }
         } catch (SQLException e) {

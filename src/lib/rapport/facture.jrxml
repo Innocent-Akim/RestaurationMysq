@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="facture" language="groovy" pageWidth="226" pageHeight="1224" columnWidth="226" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="8260879a-4af3-4e1e-b7c7-2e09defb380e">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="img" class="java.lang.String"/>
+	<parameter name="montantcdf" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from vs_facture]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="designation" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="pu" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="devise" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qte" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="montant" class="java.lang.Float">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeFacture" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="refEntreprise" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="dateFacture" class="java.sql.Timestamp">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="client" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="agent" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeProduit" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codeClient" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<variable name="montant_1" class="java.lang.Float" resetType="Group" resetGroup="codeFacture" calculation="Sum">
+		<variableExpression><![CDATA[$F{montant}]]></variableExpression>
+	</variable>
+	<group name="codeFacture">
+		<groupExpression><![CDATA[$F{codeFacture}]]></groupExpression>
+		<groupHeader>
+			<band height="90">
+				<textField>
+					<reportElement mode="Opaque" x="0" y="51" width="129" height="20" forecolor="#000000" uuid="d64788a8-4e9e-49f0-8048-2b323ad11454"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="12" isBold="true" isItalic="false" isUnderline="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["FACTURE N° "+$F{codeFacture}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="79" width="11" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="8a8e235d-235a-445c-a628-d2c9dff0515c"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#000000"/>
+						<topPen lineWidth="0.25" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["N°"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="11" y="79" width="98" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="78a5925a-6a88-4b2e-94b9-c09957813ab7"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#000000"/>
+						<topPen lineWidth="0.25" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["DESIGNATION"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="109" y="79" width="30" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="826f694b-ee21-4cc7-9992-f986eb0f1567"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#000000"/>
+						<topPen lineWidth="0.25" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["P.U"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="139" y="79" width="16" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="508377c3-4972-46b0-b622-05b8dc8eafa9"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#000000"/>
+						<topPen lineWidth="0.25" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["QTE"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="155" y="79" width="31" height="11" forecolor="#000000" backcolor="#CCCCCC" uuid="9ee83b58-cf81-4f16-8f8c-1bc403370959"/>
+					<box>
+						<pen lineWidth="0.25" lineColor="#000000"/>
+						<topPen lineWidth="0.25" lineColor="#000000"/>
+						<leftPen lineWidth="0.25" lineColor="#000000"/>
+						<bottomPen lineWidth="0.25" lineColor="#000000"/>
+						<rightPen lineWidth="0.25" lineColor="#000000"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Calibri" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["TOTAL"]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="37" width="186" height="17" forecolor="#000000" uuid="4317179d-fe34-4331-ae06-1b0ce953e262"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["CLIENT: "+$F{client}+" ID-0"+$F{codeClient}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement mode="Opaque" x="129" y="54" width="57" height="17" forecolor="#000000" uuid="0dc8c9c6-8724-4026-9b9f-b1f113255a9a"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{dateFacture}.toLocaleString()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement mode="Opaque" x="0" y="0" width="46" height="24" forecolor="#FF9900" uuid="9b3e4b4f-87b5-451a-86e8-41943f42c495"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="20" isBold="true"/>
+					</textElement>
+					<text><![CDATA[REA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="16" width="155" height="17" forecolor="#FF3300" uuid="38449d4d-7565-4f57-b083-460af2ed682d"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[PÂTISSERIE & RESTAURATION]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="28" width="139" height="11" forecolor="#000000" uuid="355a52f2-c656-4c3d-8986-96b60c6a17dd"/>
+					<textElement verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="6" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Téléphone: 243 85 87 26 087]]></text>
+				</staticText>
+				<line>
+					<reportElement x="0" y="70" width="186" height="1" uuid="b18ae239-cc83-4b4c-b2a0-28c6ebc2b489"/>
+				</line>
+				<image>
+					<reportElement x="155" y="0" width="31" height="33" uuid="96f8a099-f69f-4f91-b6a4-5d703814509d"/>
+					<imageExpression><![CDATA[$P{img}]]></imageExpression>
+				</image>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="74">
+				<textField>
+					<reportElement x="0" y="0" width="186" height="13" uuid="9d0ce4d2-cf96-4552-8200-b2d8beb8c7dd"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="10" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" MONTANT À PAYER "+$F{montant}+" "+$F{devise}+"  "]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="0" y="38" width="186" height="19" uuid="337a21da-07da-4132-9594-6108d5303d19"/>
+					<textElement textAlignment="Center">
+						<font fontName="Times New Roman" size="8" isBold="false" isUnderline="false" isPdfEmbedded="false"/>
+						<paragraph lineSpacing="Fixed" lineSpacingSize="6.0"/>
+					</textElement>
+					<text><![CDATA[Les marchandises vendues ne sont ni reprises ni échangées.]]></text>
+				</staticText>
+				<textField>
+					<reportElement mode="Opaque" x="0" y="25" width="186" height="13" forecolor="#000000" backcolor="#FFFFFF" uuid="4030ddaa-359f-4c3b-9059-6810f47acb40"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="8" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["SERVEUR: "+$F{agent}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="13" width="186" height="12" uuid="3208c043-739c-4f13-9bd6-30ae46c0a5ec"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font fontName="Times New Roman" size="8" isBold="true"/>
+					</textElement>
+					<textFieldExpression><![CDATA["MONTANT A PAYER CDF "+$P{montantcdf}+" "]]></textFieldExpression>
+				</textField>
+				<line>
+					<reportElement x="0" y="25" width="186" height="1" uuid="d627019e-e8fe-4050-970f-af3deb306560"/>
+				</line>
+				<staticText>
+					<reportElement x="0" y="57" width="186" height="17" uuid="0e45e946-f746-4837-af95-64c545daf76e"/>
+					<textElement textAlignment="Center" verticalAlignment="Top">
+						<font fontName="Times New Roman" size="12" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Merci pour votre confiance]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="11" splitType="Stretch">
+			<textField>
+				<reportElement x="11" y="0" width="98" height="11" uuid="5d9a3046-1e32-4bf5-b800-f65d67805af0"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#000000"/>
+					<topPen lineWidth="0.25" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{designation}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="0" width="30" height="11" uuid="d41e4ebd-1c53-4c62-a411-c9b6e268ae57"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#000000"/>
+					<topPen lineWidth="0.25" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{pu}+" "+$F{devise}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="0" width="16" height="11" uuid="26a88317-116a-4eb4-871a-a4e66d038e2a"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#000000"/>
+					<topPen lineWidth="0.25" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+$F{qte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="155" y="0" width="31" height="11" uuid="dbf2d700-966e-4ae3-b3cb-4cefc6766a5a"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#000000"/>
+					<topPen lineWidth="0.25" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineColor="#000000"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" "+($F{qte}*$F{pu})+" "+$F{devise}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="11" height="11" uuid="b676a878-a948-431d-8e28-71b1043ee3db"/>
+				<box>
+					<pen lineWidth="0.25" lineColor="#000000"/>
+					<topPen lineWidth="0.25" lineColor="#000000"/>
+					<leftPen lineWidth="0.25" lineColor="#000000"/>
+					<bottomPen lineWidth="0.25" lineColor="#000000"/>
+					<rightPen lineWidth="0.25" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Calibri" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{COLUMN_COUNT}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

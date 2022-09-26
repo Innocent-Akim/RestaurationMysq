@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane id="AnchorPane" fx:id="cardFacture" prefHeight="60.0" prefWidth="149.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="lib.ctrload.V_loadFactureController">
+<AnchorPane id="AnchorPane" fx:id="cardFacture" prefHeight="78.0" prefWidth="149.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrload.V_loadFactureController">
    <children>
       <AnchorPane layoutX="-3.0" layoutY="-4.0" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #7f1d1d; -fx-background-radius: 30px;" AnchorPane.leftAnchor="-3.0" AnchorPane.topAnchor="-4.0">
          <children>
@@ -17,12 +16,12 @@
             </Label>
          </children>
       </AnchorPane>
-      <Label fx:id="numero" alignment="CENTER" layoutY="20.0" prefHeight="17.0" prefWidth="149.0" text="N°-10001" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="20.0">
+      <Label fx:id="numero" alignment="CENTER" layoutY="16.0" prefHeight="17.0" prefWidth="149.0" text="N°-10001" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="16.0">
          <font>
             <Font name="Century Gothic Bold" size="15.0" />
          </font>
       </Label>
-      <Label fx:id="montant" alignment="CENTER" layoutX="1.0" layoutY="40.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: #f59e0b;" text="200000000" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label fx:id="montant" alignment="CENTER" layoutY="38.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: #f59e0b;" text="200000000" textFill="WHITE" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="Century Gothic Bold" size="16.0" />
          </font>
@@ -30,6 +29,11 @@
       <Label fx:id="client" layoutX="24.0" layoutY="-1.0" prefHeight="17.0" prefWidth="125.0" text="ORDINAIRE" AnchorPane.leftAnchor="24.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
          <font>
             <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="montanDCF" alignment="CENTER" layoutX="11.0" layoutY="50.0" prefHeight="17.0" prefWidth="149.0" style="-fx-background-color: #7f1d1d;" text="200000000" textFill="WHITE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Century Gothic" size="16.0" />
          </font>
       </Label>
    </children>

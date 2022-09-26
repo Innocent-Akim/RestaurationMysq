@@ -24,4 +24,5 @@ public class Msg {
     public static String MESSAGE_INFERIEUR = "Vous avez entrer le nontant invalider";
     public static String MESSAGE_FACT = "Créé d'abord la facture svp";
     public static String MESSAGE_QUESTION_DELETE = "Voulaiz vous supprimer svp";
+    public static String MESSAGE_ERREUR_CONNEXION = "Nom d'utilisateur ou mot de passe incorrect";
 }

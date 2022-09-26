@@ -44,11 +44,13 @@ public class View {
     public static String ERROR = "Error";
     public static String LANDGINGPAGE = "landingpage";
     public static String PARAMETRES = "Parametres";
-    public static String RAPPORT = "Rapports";
+    public static String RAPPORT = "Rapport";
     public static String PRODUITS = "Produits";
     public static String PERSONNE = "Personnel";
     public static String MENU = "Menu";
     public static String V_FACTURE = "V_Facturation";
+    public static String TAUX = "Taux";
+//    public static String RAPPORT = "Rapport";
     private static View instance;
 
     private String getUri(String uri) {
@@ -68,6 +70,7 @@ public class View {
         map.put(PERSONNE, getUri(PERSONNE));
         map.put(MENU, getUri(MENU));
         map.put(V_FACTURE, getUri(V_FACTURE));
+        map.put(TAUX, getUri(TAUX));
     }
 
     public static View instance() {

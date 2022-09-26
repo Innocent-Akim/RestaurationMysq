@@ -5,8 +5,8 @@
  */
 package lib.ctrlgui;
 
-import com.jfoenix.controls.JFXListView;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +16,8 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.Main.Acces;
+import static lib.Main.Main.stage;
 import lib.Main.View;
 import lib.app.App;
 import lib.app.Vars;
@@ -27,7 +29,7 @@ import org.controlsfx.control.PopOver;
  * @author ISDR
  */
 public class PrincipalController implements Initializable {
-    
+
     @FXML
     private StackPane screen;
     @FXML
@@ -56,9 +58,9 @@ public class PrincipalController implements Initializable {
     private Text txUserName;
     @FXML
     private Text txtFonctionuser;
-    @FXML
-    private JFXListView<?> listdata;
     public static StackPane screenPane;
+    @FXML
+    private MaterialDesignIconView btn_deconnection;
 
     /**
      * Initializes the controller class.
@@ -66,13 +68,19 @@ public class PrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         screenPane = screen;
-        Vars.vars.setRefEntreprise("1");
+        txUserName.setText(Vars.vars.getNom());
         App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
         View.instance().setContaint(screen, View.DASHBOARD);
         initEvent();
     }
-    
+
     void initEvent() {
+        btn_deconnection.setOnMouseClicked((action) -> {
+            stage.setContent(View.instance().get(View.MENU));
+        });
+        menu_security.setOnMouseEntered((e) -> {
+            initAcces();
+        });
         b_dash.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
             View.instance().setContaint(screen, View.DASHBOARD);
@@ -86,17 +94,26 @@ public class PrincipalController implements Initializable {
                 System.out.print(ex.getMessage());
             }
         });
-        
+
         b_rapport.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
-//            View.instance().setContaint(screen, View.RAPPORT);
+            View.instance().setContaint(screen, View.RAPPORT);
 
         });
         b_parametre.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_parametre, b_rapport, b_operation, b_dash);
             View.instance().setContaint(screen, View.PARAMETRES);
         });
-        
+
     }
-    
+
+    void initAcces() {
+        Acces.setAcces(b_dash, "Dashboard");
+        Acces.setAcces(b_operation, "Operation");
+//        Acces.setAcces(, "Comptabilite");
+        Acces.setAcces(b_parametre, "Parametre");
+        Acces.setAcces(b_rapport, "Rapport");
+
+    }
+
 }

@@ -19,8 +19,11 @@ import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
 import org.controlsfx.control.Notifications;
 
@@ -29,6 +32,8 @@ import org.controlsfx.control.Notifications;
  * @author ISDR
  */
 public class Alerte {
+
+    public static Alerte alerte = new Alerte();
 
     public static boolean alertQuestion(String header, String txte) {
         boolean val;
@@ -99,12 +104,6 @@ public class Alerte {
         return true;
     }
 
-//    public void rechercher(JFXPopup a, String b) throws IOException {
-//        AnchorPane anc = FXMLLoader.load(getClass().getResource(b));
-//        a.setContent(anc);
-//        a.setSource(a);
-//        a.show(JFXPopup.PopupVPosition.TOP, JFXPopup.PopupHPosition.LEFT);
-//    }
     public static void showFormDialog(String title, StackPane rootPane, URL location, JFXDialog.DialogTransition transition) throws IOException {
         JFXDialog dialog;
         Node node = FXMLLoader.load(location);
@@ -121,5 +120,16 @@ public class Alerte {
         dl.setActions(ok);
         dialog.show(rootPane);
 
+    }
+
+    public boolean setAlert(String message, Alert.AlertType type) {
+        Alert alert = new Alert(type);
+        alert.setTitle("Alert");
+        alert.initStyle(StageStyle.DECORATED);
+        alert.setHeaderText(message);
+        Stage stages = (Stage) alert.getDialogPane().getScene().getWindow();
+        stages.getIcons().add(new Image(this.getClass().getResource(manifest.APP_ICON).toString()));
+        Optional<ButtonType> result = alert.showAndWait();
+        return (result.get() == ButtonType.OK);
     }
 }
