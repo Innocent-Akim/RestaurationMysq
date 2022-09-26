@@ -105,13 +105,16 @@
                         </AnchorPane>
                         <AnchorPane layoutX="12.0" layoutY="512.0" prefHeight="125.0" prefWidth="167.0" style="-fx-background-color: #F6F7F9; -fx-background-radius: 0.5em;" AnchorPane.bottomAnchor="18.0">
                            <children>
-                              <MaterialDesignIconView fill="#f6ad2a" glyphName="ACCOUNT_BOX" layoutX="12.0" layoutY="62.0" size="48" />
+                              <MaterialDesignIconView fx:id="btn_deconnection" fill="#f6ad2a" glyphName="ACCOUNT_BOX" layoutX="12.0" layoutY="62.0" size="48">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor></MaterialDesignIconView>
                               <Text fx:id="txUserName" layoutX="20.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Akilimali Cizungu" wrappingWidth="143.00000503659248">
                                  <font>
                                     <Font name="Century Gothic Bold" size="16.0" />
                                  </font>
                               </Text>
-                              <Text fx:id="txtFonctionuser" fill="#bf320e" layoutX="21.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateur EMS " wrappingWidth="130.00000503659248">
+                              <Text fx:id="txtFonctionuser" fill="#bf320e" layoutX="22.0" layoutY="100.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utilisateur REA patisserie" wrappingWidth="142.99997171759605">
                                  <font>
                                     <Font size="13.0" />
                                  </font>

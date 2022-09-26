@@ -3,6 +3,7 @@
 <?import com.jfoenix.controls.JFXListView?>
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
 <?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.effect.DropShadow?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -76,27 +77,22 @@
                               <Font name="Tahoma Bold" size="24.0" />
                            </font>
                         </Label>
-                        <Label fx:id="username" alignment="TOP_RIGHT" contentDisplay="RIGHT" layoutX="592.0" layoutY="11.0" prefHeight="20.0" prefWidth="189.0" text="AKILIMALI CIZUNGU" AnchorPane.rightAnchor="50.0">
+                        <Label fx:id="username" alignment="TOP_RIGHT" contentDisplay="CENTER" layoutX="592.0" layoutY="11.0" prefHeight="20.0" prefWidth="189.0" text="AKILIMALI CIZUNGU" AnchorPane.rightAnchor="50.0">
                            <font>
                               <Font name="Tahoma Bold" size="14.0" />
                            </font>
                         </Label>
-                        <AnchorPane layoutX="786.0" layoutY="5.0" prefHeight="47.0" prefWidth="35.0" style="-fx-background-color: #1C9FE3; -fx-background-radius: 25px;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
+                        <AnchorPane fx:id="btn_deconnection" layoutX="786.0" layoutY="5.0" prefHeight="47.0" prefWidth="35.0" style="-fx-background-color: #1C9FE3; -fx-background-radius: 25px;" AnchorPane.bottomAnchor="5.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="5.0">
                            <children>
                               <MaterialDesignIconView fill="WHITE" glyphName="ACCOUNT_CIRCLE" layoutX="15.0" layoutY="27.125" size="20" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="15.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="14.0" />
                            </children>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                         </AnchorPane>
                         <Label alignment="TOP_RIGHT" layoutX="634.0" layoutY="26.0" prefHeight="17.0" prefWidth="189.0" text="REA Pâtisserie &amp; Restaurant" textFill="#b9b3b3" AnchorPane.rightAnchor="50.0" />
                      </children>
                   </AnchorPane>
-                  <GridPane hgap="4.0" layoutX="746.0" layoutY="10.0" vgap="4.0" AnchorPane.rightAnchor="5.0">
-                     <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
-                     </columnConstraints>
-                     <rowConstraints>
-                        <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
-                     </rowConstraints>
-                  </GridPane>
                </children>
                <effect>
                   <DropShadow color="#e36a0e60" />

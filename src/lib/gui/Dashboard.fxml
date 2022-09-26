@@ -53,12 +53,12 @@
                <children>
                   <VBox alignment="CENTER" prefHeight="210.0" prefWidth="187.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
-                        <Label fx:id="fournisseur" alignment="CENTER" text="231" textFill="#3d1909">
+                        <Label fx:id="produit" alignment="CENTER" text="231" textFill="#3d1909">
                            <font>
                               <Font name="Century Gothic Bold" size="45.0" />
                            </font>
                         </Label>
-                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Commande">
+                        <Text fill="#b6b6b6" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-fill: -text-color;" text="Produits">
                            <font>
                               <Font name="Century Gothic Bold" size="17.0" />
                            </font>

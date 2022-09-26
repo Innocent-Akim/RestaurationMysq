@@ -15,6 +15,9 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.layout.AnchorPane;
+import static lib.Main.Main.stage;
+import lib.Main.View;
 import lib.app.App;
 import lib.app.Datasource;
 import lib.app.Vars;
@@ -27,7 +30,7 @@ import lib.ctrload.V_loadTableController;
  * @author ISDR
  */
 public class V_FacturationController implements Initializable {
-    
+
     @FXML
     private JFXListView<?> ListClient;
     @FXML
@@ -45,6 +48,8 @@ public class V_FacturationController implements Initializable {
     private Label tauxjour;
     @FXML
     private Label username;
+    @FXML
+    private AnchorPane btn_deconnection;
 
     /**
      * Initializes the controller class.
@@ -58,9 +63,15 @@ public class V_FacturationController implements Initializable {
         ListFactureView = ListFacture;
         tauxjour.setText(Datasource.getValue("SELECT taux FROM taux WHERE status=1") + " CDF");
         initLoad();
-        
+        btn_deconnection.setOnMouseClicked((action) -> {
+            Vars.vars.setRefEntreprise("");
+            Vars.vars.setNom("");
+            Vars.vars.setCode("");
+            stage.setContent(View.instance().get(View.LOGIN));
+        });
+
     }
-    
+
     void initLoad() {
         try {
             int index = 0;

@@ -6,6 +6,7 @@
 package lib.ctrlgui;
 
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
+import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -16,6 +17,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import lib.Main.Acces;
+import static lib.Main.Main.stage;
 import lib.Main.View;
 import lib.app.App;
 import lib.app.Vars;
@@ -57,6 +59,8 @@ public class PrincipalController implements Initializable {
     @FXML
     private Text txtFonctionuser;
     public static StackPane screenPane;
+    @FXML
+    private MaterialDesignIconView btn_deconnection;
 
     /**
      * Initializes the controller class.
@@ -64,13 +68,16 @@ public class PrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         screenPane = screen;
-        Vars.vars.setRefEntreprise("1");
+        txUserName.setText(Vars.vars.getNom());
         App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
         View.instance().setContaint(screen, View.DASHBOARD);
         initEvent();
     }
 
     void initEvent() {
+        btn_deconnection.setOnMouseClicked((action) -> {
+            stage.setContent(View.instance().get(View.MENU));
+        });
         menu_security.setOnMouseEntered((e) -> {
             initAcces();
         });

@@ -88,7 +88,10 @@ public class LoginController implements Initializable {
                     Vars.vars.setNom(res.getString("nom"));
                     Vars.vars.setContact(res.getString("contact"));
                     Main.acces = new Acces(res.getString("ID"));
+                    usernameTfd.clear();
+                    passwordTfd.clear();
                     stage.setContent(View.instance().get(View.MENU));
+
                 } else {
                     Alerte.alerteErreur("Attention", Msg.MESSAGE_ERREUR_CONNEXION);
                 }
