@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="655.0" prefWidth="1209.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.MenuController">
+<AnchorPane id="AnchorPane" fx:id="screenMenu" prefHeight="655.0" prefWidth="1209.0" style="-fx-background-color: fff;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.MenuController">
    <children>
-      <ImageView fitHeight="718.0" fitWidth="951.0" layoutX="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="107.0">
+      <ImageView fitHeight="575.0" fitWidth="951.0" layoutX="151.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="151.0" AnchorPane.rightAnchor="107.0">
          <image>
             <Image url="@../img/home.png" />
          </image>
@@ -30,7 +30,7 @@
                   <FontAwesomeIconView glyphName="SHOPPING_BASKET" size="30" />
                </graphic>
             </JFXButton>
-            <JFXButton fx:id="btn_settings" buttonType="RAISED" prefHeight="60.0" prefWidth="208.0" style="-fx-background-color: fff; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #f59e0b; -fx-border-width: 0.25px;" text="Tableau bord">
+            <JFXButton fx:id="btn_settings" buttonType="RAISED" prefHeight="60.0" prefWidth="208.0" style="-fx-background-color: fff; -fx-background-radius: 5px; -fx-border-radius: 5px; -fx-border-color: #f59e0b; -fx-border-width: 0.25px;" text="Tableau de bord">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>

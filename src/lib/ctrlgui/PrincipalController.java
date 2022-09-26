@@ -5,7 +5,6 @@
  */
 package lib.ctrlgui;
 
-import com.jfoenix.controls.JFXListView;
 import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView;
 import java.io.IOException;
 import java.net.URL;
@@ -16,6 +15,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.Main.Acces;
 import lib.Main.View;
 import lib.app.App;
 import lib.app.Vars;
@@ -27,7 +27,7 @@ import org.controlsfx.control.PopOver;
  * @author ISDR
  */
 public class PrincipalController implements Initializable {
-    
+
     @FXML
     private StackPane screen;
     @FXML
@@ -69,8 +69,11 @@ public class PrincipalController implements Initializable {
         View.instance().setContaint(screen, View.DASHBOARD);
         initEvent();
     }
-    
+
     void initEvent() {
+        menu_security.setOnMouseEntered((e) -> {
+            initAcces();
+        });
         b_dash.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_dash, b_operation, b_rapport, b_parametre);
             View.instance().setContaint(screen, View.DASHBOARD);
@@ -84,7 +87,7 @@ public class PrincipalController implements Initializable {
                 System.out.print(ex.getMessage());
             }
         });
-        
+
         b_rapport.setOnMouseClicked((event) -> {
             App.getInstance().IsSeleted(b_rapport, b_operation, b_dash, b_parametre);
             View.instance().setContaint(screen, View.RAPPORT);
@@ -94,7 +97,16 @@ public class PrincipalController implements Initializable {
             App.getInstance().IsSeleted(b_parametre, b_rapport, b_operation, b_dash);
             View.instance().setContaint(screen, View.PARAMETRES);
         });
-        
+
     }
-    
+
+    void initAcces() {
+        Acces.setAcces(b_dash, "Dashboard");
+        Acces.setAcces(b_operation, "Operation");
+//        Acces.setAcces(, "Comptabilite");
+        Acces.setAcces(b_parametre, "Parametre");
+        Acces.setAcces(b_rapport, "Rapport");
+
+    }
+
 }

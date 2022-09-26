@@ -10,6 +10,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.layout.AnchorPane;
+import lib.Main.Acces;
 import static lib.Main.Main.stage;
 import lib.Main.View;
 import lib.app.Datasource;
@@ -27,6 +29,8 @@ public class MenuController implements Initializable {
     private JFXButton btn_facturation;
     @FXML
     private JFXButton btn_settings;
+    @FXML
+    private AnchorPane screenMenu;
 
     /**
      * Initializes the controller class.
@@ -40,6 +44,9 @@ public class MenuController implements Initializable {
     }
 
     void initEvent() {
+        screenMenu.setOnMouseEntered((event) -> {
+            initAcces();
+        });
         btn_facturation.setOnAction((action) -> {
             stage.setContent(View.instance().get(View.V_FACTURE));
 
@@ -47,5 +54,11 @@ public class MenuController implements Initializable {
         btn_settings.setOnAction((action) -> {
             stage.setContent(View.instance().get(View.PRINCIPARE));
         });
+    }
+
+    void initAcces() {
+        Acces.setAcces(btn_settings, "TABLEAU DE BORD");
+        Acces.setAcces(btn_facturation, "Facturation");
+
     }
 }

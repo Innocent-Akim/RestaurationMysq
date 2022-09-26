@@ -24,6 +24,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
+import lib.Main.Acces;
+import lib.Main.Main;
 import static lib.Main.Main.stage;
 import lib.Main.View;
 import lib.app.Alerte;
@@ -85,6 +87,7 @@ public class LoginController implements Initializable {
                     Vars.vars.setRefEntreprise(res.getString("refEntreprise"));
                     Vars.vars.setNom(res.getString("nom"));
                     Vars.vars.setContact(res.getString("contact"));
+                    Main.acces = new Acces(res.getString("ID"));
                     stage.setContent(View.instance().get(View.MENU));
                 } else {
                     Alerte.alerteErreur("Attention", Msg.MESSAGE_ERREUR_CONNEXION);

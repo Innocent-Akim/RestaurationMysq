@@ -40,12 +40,11 @@ public final class Acces {
     }
 
     public Acces(String codeUser) {
-        listeAcces = initData("SELECT fonction FROM Ttaches WHERE  refEntreprise= '" + Vars.vars.getRefEntreprise() + "' AND codeUser='" + codeUser + "' AND etat=1");
+        listeAcces = initData("SELECT designation FROM tache WHERE  codeUser='" + codeUser + "' AND status=1");
     }
 
     public static void setAcces(Node element, String fonction) {
-
-        if (!listeAcces.contains(fonction)) {
+        if (!listeAcces.contains(fonction.toUpperCase())) {
             element.setDisable(true);
         }
     }
@@ -56,7 +55,8 @@ public final class Acces {
             list.clear();
             resultSet = cnx().createStatement().executeQuery(query);
             while (resultSet.next()) {
-                list.add(resultSet.getString(1));
+
+                list.add(resultSet.getString(1).toUpperCase());
             }
         } catch (SQLException ex) {
         }
@@ -84,7 +84,7 @@ public final class Acces {
         initTach().forEach((data) -> {
             try {
                 LoadTacheController.taskpublc = data;
-                list.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/loadTache.fxml")));
+                list.getItems().add(FXMLLoader.load(getClass().getResource("/lib/load/loadTachesearch.fxml")));
             } catch (IOException e) {
                 e.printStackTrace();
             }

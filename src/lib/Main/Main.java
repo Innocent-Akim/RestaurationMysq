@@ -17,7 +17,7 @@ import vulembere.vulembereGUI;
  */
 public class Main extends Application {
 
-//    public static Acces acces = null;
+    public static Acces acces = null;
     public static vulembereGUI stage = null;
     public static Stage primaryStage_;
 

@@ -14,7 +14,7 @@
 <AnchorPane prefHeight="421.0" prefWidth="271.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lib.ctrlgui.UtilisateurController">
       <children>
           <JFXListView fx:id="listUtilisateur" focusTraversable="false" layoutX="2.0" layoutY="77.0" prefHeight="343.0" prefWidth="217.0" style="-fx-background-color: Transparent;" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="77.0" />
-          <JFXButton fx:id="btn_add" alignment="CENTER" contentDisplay="CENTER" layoutX="195.0" layoutY="45.0" onMouseClicked="#showListSousCategorie" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #FBAA17; -fx-background-radius: 50px;" text=" " AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="45.0">
+          <JFXButton fx:id="btn_add" alignment="CENTER" contentDisplay="CENTER" layoutX="244.0" layoutY="45.0" onMouseClicked="#showListSousCategorie" prefHeight="25.0" prefWidth="25.0" style="-fx-background-color: #FBAA17; -fx-background-radius: 50px;" text=" " AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="45.0">
               <font>
                   <Font size="9.0" />
               </font>

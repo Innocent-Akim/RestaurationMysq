@@ -11,6 +11,8 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import lib.app.Datasource;
+import lib.ctrlgui.UtilisateurController;
 
 /**
  * FXML Controller class
@@ -18,7 +20,7 @@ import javafx.scene.layout.AnchorPane;
  * @author ISDR
  */
 public class LoadTachesearchController implements Initializable {
-
+    
     @FXML
     private AnchorPane cardeTache;
     @FXML
@@ -34,6 +36,10 @@ public class LoadTachesearchController implements Initializable {
         // TODO
         lblTache.setText(public_String);
         public_tache_string = lblTache;
+        cardeTache.setOnMouseClicked((event) -> {
+            UtilisateurController.public_search.setText(lblTache.getText());
+            UtilisateurController.public_listsearch.setVisible(false);
+        });
     }
-
+    
 }
